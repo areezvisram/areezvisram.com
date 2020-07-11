@@ -1,22 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+import Logo from "../components/logo"
+import Github from "../components/socials/github"
+import LinkedIn from "../components/socials/linkedin"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const IndexPage = () => {
+  return (
+    <div
+      style={{
+        background: "#101357",
+        width: "100%",
+        height: "100vh",
+      }}
+    >
+      <Logo />
+      <a href="https://github.com/areezvisram" target="_blank">
+        <Github />
+      </a>
+      <a href="https://www.linkedin.com/in/areezvisram/" target="_blank">
+      <LinkedIn />
+      </a>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  )
+}
 
 export default IndexPage
