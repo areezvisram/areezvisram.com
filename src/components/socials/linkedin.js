@@ -10,9 +10,9 @@ const LinkedIn = () => {
         height: "5%",
         width: "5%",
         fill: "#ffffff",
-        position: "absolute",
-        marginTop: "36%",
-        marginLeft: "-4.9%"
+        position: "fixed",
+        bottom: "4%",
+        left: "0",
       }}
     >
       <title>LinkedIn</title>

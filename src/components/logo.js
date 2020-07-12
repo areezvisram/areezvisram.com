@@ -16,13 +16,11 @@ const Logo = () => {
     }
   `)
   return (
-    <div>
       <Img
         fixed={data.image.childImageSharp.fixed}
         alt="logo"
-        style={{ top: -20 }}
+        style={{ top: "7%" }}
       />
-    </div>
   )
 }
 

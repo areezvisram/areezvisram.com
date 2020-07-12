@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -229,7 +229,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -619,4 +619,19 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+} */
+
+/* .heading {
+  color: #fff;
+display: table-cell;
+vertical-align: middle;
+position: relative;
+z-index: 1;
 }
+
+.heading h1{
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 62px;
+	text-transform: uppercase;
+} */

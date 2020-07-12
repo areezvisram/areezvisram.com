@@ -7,11 +7,12 @@ const Github = () => {
       role="img"
       viewBox="0 0 438.549 438.549"
       style={{
-        marginTop: "32%",
-        marginLeft: "0%",
         height: "5%",
         width: "5%",
         fill: "#ffffff",
+        position: "fixed",
+        bottom: "12%",
+        left: "0",
       }}
     >
       <title>Github</title>
