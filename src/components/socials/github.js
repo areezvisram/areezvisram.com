@@ -7,8 +7,8 @@ const Github = () => {
       role="img"
       viewBox="0 0 438.549 438.549"
       style={{
-        height: "5%",
-        width: "5%",
+        height: "4%",
+        width: "4%",
         fill: "#ffffff",
         position: "fixed",
         bottom: "12%",

@@ -24,6 +24,9 @@ const IndexPage = () => {
       <a href="https://www.linkedin.com/in/areezvisram/" target="_blank">
         <LinkedIn />
       </a>
+
+
+
     </div>
   )
 }

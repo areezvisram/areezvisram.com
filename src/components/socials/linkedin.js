@@ -7,8 +7,8 @@ const LinkedIn = () => {
       role="img"
       viewBox="0 0 430.117 430.117"
       style={{
-        height: "5%",
-        width: "5%",
+        height: "4%",
+        width: "4%",
         fill: "#ffffff",
         position: "fixed",
         bottom: "4%",
