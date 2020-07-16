@@ -6,14 +6,7 @@ const LinkedIn = () => {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 430.117 430.117"
-      style={{
-        height: "4%",
-        width: "4%",
-        fill: "#ffffff",
-        position: "fixed",
-        bottom: "4%",
-        left: "0",
-      }}
+      className="linkedin"
     >
       <title>LinkedIn</title>
       <path

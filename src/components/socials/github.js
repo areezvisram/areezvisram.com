@@ -6,14 +6,7 @@ const Github = () => {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 438.549 438.549"
-      style={{
-        height: "4%",
-        width: "4%",
-        fill: "#ffffff",
-        position: "fixed",
-        bottom: "12%",
-        left: "0",
-      }}
+      className = "github"
     >
       <title>Github</title>
       

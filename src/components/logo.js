@@ -19,7 +19,7 @@ const Logo = () => {
       <Img
         fixed={data.image.childImageSharp.fixed}
         alt="logo"
-        style={{ top: "7%" }}
+        className = "logo"
       />
   )
 }

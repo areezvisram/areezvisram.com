@@ -8,7 +8,7 @@ import Introduction from "../components/introduction"
 
 const IndexPage = () => {
   return (
-    <div
+    <div className="container"
       style={{
         background: "#101357",
         width: "100%",

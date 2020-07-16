@@ -7,6 +7,7 @@ $lightblue: #5efbda;
 html,
 body {
   font-family: $font;
+  width: 100%;
 }
 
 .container {
@@ -26,6 +27,28 @@ body {
     width: 768px;
     min-width: 768px;
   }
+}
+
+.github {
+  height: 4%;
+  width: 4%;
+  fill: #ffffff;
+  position: fixed;
+  bottom: 12%;
+  left: 0;
+}
+
+.linkedin {
+  height: 4%;
+  width: 4%;
+  fill: #ffffff;
+  position: fixed;
+  bottom: 4%;
+  left: 0;
+}
+
+.logo {
+  top: 7%;
 }
 
 header {
@@ -59,6 +82,8 @@ header {
 }
 
 .intro-container {
+  display: flex;
+  flex-direction: column;
   top: 80px;
   width: 100%;
   height: 70%;
@@ -69,7 +94,7 @@ header {
     margin-top: 6%;
     background-color: $background;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 3.5rem;
     font-family: $font;
     text-indent: 26%;
   }
@@ -77,7 +102,7 @@ header {
     color: $white;
     background-color: $background;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-family: $font;
     text-indent: 26%;
   }
@@ -85,23 +110,81 @@ header {
     color: $white;
     background-color: $background;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-family: $font;
     text-indent: 26%;
   }
-  .description-1 {
-    color: $white;
-    margin-top: 1%;
-    background-color: $background;
-    font-size: 25px;
-    font-family: $font;
-    text-indent: 26%;
+  .description-container {
+    .description-1 {
+      color: $white;
+      margin-top: 1%;
+      background-color: $background;
+      font-size: 1.5rem;
+      font-family: $font;
+      width: 40%;
+      display: block;
+      margin-left: 26%;
+    }
   }
+  
   .description-2 {
     color: $white;
     background-color: $background;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: $font;
     text-indent: 26%;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    display: none;
+  }
+
+  .logo {
+    left: 9%;
+  }
+
+  .github {
+    display: none;
+  }
+
+  .linkedin {
+    display: none;
+  }
+
+  header {
+    margin-bottom: 2px;
+  }
+
+  .intro-container {
+    width: 100%;
+    .sentence_opener {
+      text-indent: 5%;
+      font-size: 1.5rem;
+      overflow-wrap: break-word;
+    }
+    .introduction {
+      text-indent: 5%;
+      font-size: 1.5rem;
+      overflow-wrap: break-word;
+    }
+    .what-I-Do {
+      text-indent: 5%;
+      font-size: 1.5rem;
+      overflow-wrap: break-word;
+    }
+    .description-container{
+      width: 100%;
+      .description-1 {
+        margin-left: 5%;
+        font-size: 1.2rem;
+        overflow-wrap: break-word;
+        width: 80%;
+        
+      }
+    }
+
+  }
+
 }
