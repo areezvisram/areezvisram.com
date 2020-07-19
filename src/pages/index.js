@@ -1,10 +1,11 @@
 import React from "react"
-import Logo from "../components/logo"
 import Github from "../components/socials/github"
 import LinkedIn from "../components/socials/linkedin"
 import Header from "../components/header"
 import "../styles/styles.scss"
 import Introduction from "../components/introduction"
+import AboutMe from "../components/aboutMe"
+
 
 const IndexPage = () => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = () => {
       
       <Header />
       <Introduction/>
+      <AboutMe />
       <a href="https://github.com/areezvisram" target="_blank">
         <Github />
       </a>

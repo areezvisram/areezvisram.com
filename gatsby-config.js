@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-glamor`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -150,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

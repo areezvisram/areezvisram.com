@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Logo = () => {
   const data = useStaticQuery(graphql`
@@ -16,11 +17,13 @@ const Logo = () => {
     }
   `)
   return (
+    <AnchorLink to="/#intro">
       <Img
         fixed={data.image.childImageSharp.fixed}
         alt="logo"
-        className = "logo"
+        className="logo"
       />
+    </AnchorLink>
   )
 }
 

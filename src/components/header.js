@@ -1,12 +1,15 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Logo from "./logo"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Header = () => (
   <header
     style={{
       background: `#101357`,
+      height: `100px`,
+      position: `fixed`,
+      zIndex: `50`
     }}
   >
     <div className="container">
@@ -14,7 +17,7 @@ const Header = () => (
         <Logo />
         <div className="navigation">
           <nav>
-            <Link to="/about">About</Link>
+            <AnchorLink to="/#about">About</AnchorLink>
             <Link to="/experience">Experience</Link>
             <Link to="/work">Work</Link>
             <Link to="/contact">Contact</Link>

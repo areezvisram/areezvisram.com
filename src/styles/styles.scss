@@ -1,3 +1,4 @@
+//General
 $font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
 $white: #fff;
@@ -8,27 +9,77 @@ html,
 body {
   font-family: $font;
   width: 100%;
+  background-color: $background;
 }
 
+.background {
+  background: $background;
+  width: 100%;
+  height: 500vh;
+}
+//Nav bar
 .container {
   width: 1870px;
+  height: 500vh;
   min-width: 1870px;
   margin: 0 auto;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1870px) {
+    width: 1760px;
+    min-width: 1760px;
+  }
+
+  @media (max-width: 1760px) and (min-width: 1471px) {
+    width: 1470px;
+    min-width: 1470px;
+    // .me-all {
+    //   display: none;
+    // }
+    .me {
+      //display: none;
+      height: 300px !important;
+      width: 400px !important;
+      object-fit: contain !important;
+    }
+  }
+
+  @media (max-width: 1470px) {
     width: 1280px;
     min-width: 1280px;
+    .me {
+      //display: none;
+      height: 300px !important;
+      width: 400px !important;
+      object-fit: contain !important;
+    }
   }
   @media (max-width: 1280px) {
     width: 976px;
     min-width: 976px;
+    .me {
+      //display: none;
+      height: 250px !important;
+      width: 350px !important;
+      object-fit: contain !important;
+    }
+
+    @media (max-width: 1250px) {
+      .me-all {
+        margin-right: 8% !important;
+      }
+    }
   }
-  @media (max-width: 976px) {
+  @media (max-width: 976px) and (min-width: 481px) {
     width: 768px;
     min-width: 768px;
+    .me-all {
+      margin-right: 15% !important;
+      width: 70% !important;
+    }
   }
 }
 
+//Socials
 .github {
   height: 4%;
   width: 4%;
@@ -36,6 +87,7 @@ body {
   position: fixed;
   bottom: 12%;
   left: 0;
+  z-index: 20;
 }
 
 .linkedin {
@@ -45,12 +97,15 @@ body {
   position: fixed;
   bottom: 4%;
   left: 0;
+  z-index: 20;
 }
 
+//Logo Full Screen
 .logo {
   top: 7%;
 }
 
+//Header Full Screen
 header {
   height: 80px;
   width: 100%;
@@ -81,6 +136,7 @@ header {
   }
 }
 
+//Intro Full Screen
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -94,7 +150,7 @@ header {
     margin-top: 6%;
     background-color: $background;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 3vw;
     font-family: $font;
     text-indent: 26%;
   }
@@ -102,7 +158,7 @@ header {
     color: $white;
     background-color: $background;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 3vw;
     font-family: $font;
     text-indent: 26%;
   }
@@ -110,7 +166,7 @@ header {
     color: $white;
     background-color: $background;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 3vw;
     font-family: $font;
     text-indent: 26%;
   }
@@ -119,24 +175,57 @@ header {
       color: $white;
       margin-top: 1%;
       background-color: $background;
-      font-size: 1.5rem;
+      font-size: 1.5vw;
       font-family: $font;
       width: 40%;
       display: block;
       margin-left: 26%;
     }
   }
-  
-  .description-2 {
-    color: $white;
-    background-color: $background;
-    font-size: 1.5rem;
-    font-family: $font;
-    text-indent: 26%;
+}
+
+//About me full screen
+.about-me-container {
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1000px;
+  width: 100%;
+  height: 56%;
+  position: absolute;
+  background-color: $background;
+  .me {
+    width: 100vw;
+    //min-height: 400px !important;
+    //min-width: 500px !important;
+    margin-right: 10%;
+  }
+
+  .me-all {
+    max-height: 400px !important;
+    max-width: 750px;
+    margin-left: 15%;
+    margin-right: 8%;
+    .about-me-title {
+      color: $lightblue;
+      background-color: $background;
+      font-weight: bold;
+      font-size: 3vw;
+      font-family: $font;
+    }
+    .about-me-description {
+      color: $white;
+      margin-top: 1%;
+      background-color: $background;
+      font-size: 1.5vw;
+      font-family: $font;
+      display: flex;
+    }
   }
 }
 
-@media only screen and (max-width: 600px) {
+//Mobile view
+@media only screen and (max-width: 500px) {
   .navigation {
     display: none;
   }
@@ -174,17 +263,151 @@ header {
       font-size: 1.5rem;
       overflow-wrap: break-word;
     }
-    .description-container{
+    .description-container {
       width: 100%;
       .description-1 {
         margin-left: 5%;
         font-size: 1.2rem;
         overflow-wrap: break-word;
         width: 80%;
-        
       }
     }
-
   }
 
+  .about-me-container {
+    width: 100%;
+    flex-direction: column;
+    .me {
+      height: 500px !important;
+      width: 92% !important;
+      object-fit: contain !important;
+      overflow: visible !important;
+      margin-left: 3%;
+      //margin-right: 3%;
+      margin-top: 10px;
+    }
+    .me-all {
+      bottom: 100px !important;
+      margin-left: 5%;
+      margin-right: 0;
+      overflow-wrap: break-word;
+      width: 80%;
+      .about-me-title {
+        font-size: 1.5rem;
+      }
+      .about-me-description {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//iPad View
+@media only screen and (max-width: 773px) and (min-width: 481px) {
+  .navigation {
+    display: none;
+  }
+
+  .logo {
+    left: 25vw;
+  }
+
+  .github {
+    display: none;
+  }
+
+  .linkedin {
+    display: none;
+  }
+
+  .intro-container {
+    width: 100%;
+    .sentence_opener {
+      text-indent: 5%;
+      font-size: 1.5rem;
+      overflow-wrap: break-word;
+    }
+    .introduction {
+      text-indent: 5%;
+      font-size: 1.5rem;
+      overflow-wrap: break-word;
+    }
+    .what-I-Do {
+      text-indent: 5%;
+      font-size: 1.5rem;
+      overflow-wrap: break-word;
+    }
+    .description-container {
+      width: 100%;
+      .description-1 {
+        margin-left: 5%;
+        font-size: 1.2rem;
+        overflow-wrap: break-word;
+        width: 60%;
+      }
+    }
+  }
+
+  .about-me-container {
+    width: 100%;
+    .me-all {
+      margin-left: 5%;
+      margin-right: 0;
+      overflow-wrap: break-word;
+      width: 60%;
+      .about-me-title {
+        font-size: 1.5rem;
+      }
+      .about-me-description {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//Between full screen and iPad view
+@media only screen and (max-width: 1250px) and (min-width: 773px) {
+  .intro-container {
+    width: 100%;
+    .sentence_opener {
+      text-indent: 26%;
+      font-size: 2rem;
+      overflow-wrap: break-word;
+    }
+    .introduction {
+      text-indent: 26%;
+      font-size: 2rem;
+      overflow-wrap: break-word;
+    }
+    .what-I-Do {
+      text-indent: 26%;
+      font-size: 2rem;
+      overflow-wrap: break-word;
+    }
+    .description-container {
+      width: 100%;
+      .description-1 {
+        margin-left: 26%;
+        font-size: 1.25rem;
+        overflow-wrap: break-word;
+        width: 40%;
+      }
+    }
+  }
+
+  .about-me-container {
+    width: 100%;
+    .me-all {
+      margin-right: 10%;
+      margin-right: 0;
+      overflow-wrap: break-word;
+      width: 40%;
+      .about-me-title {
+        font-size: 2rem;
+      }
+      .about-me-description {
+        font-size: 1.25rem;
+      }
+    }
+  }
 }
