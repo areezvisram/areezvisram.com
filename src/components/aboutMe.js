@@ -5,9 +5,11 @@ const aboutMe = () => {
   return (
     <div className="about-me-container" id="about">
       <div className="me-all">
-        <div className="about-me-title">About Me</div>
+        <div className="about-me-title">
+          About Me<hr className="about-line"></hr>
+        </div>
         <div className="about-me-description">
-          My name is Areez and I'm a software engineer from Toronto, ON.{" "}
+          My name is Areez and I'm a software engineer from Toronto.{" "}
         </div>
         <div className="about-me-description">
           I enjoy creating various types of software projects, including

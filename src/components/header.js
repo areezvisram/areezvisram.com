@@ -12,14 +12,14 @@ const Header = () => (
       zIndex: `50`
     }}
   >
-    <div className="container">
+    <div className="header-container">
       <div className="inner-header">
         <Logo />
         <div className="navigation">
           <nav>
             <AnchorLink to="/#about">About</AnchorLink>
-            <Link to="/experience">Experience</Link>
-            <Link to="/work">Work</Link>
+            <AnchorLink to="/#experience">Experience</AnchorLink>
+            <Link to="/work">Projects</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/resume">Resume</Link>
           </nav>

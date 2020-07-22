@@ -23,20 +23,25 @@ body {
   height: 500vh;
   min-width: 1870px;
   margin: 0 auto;
+  z-index: -1;
 
   @media (max-width: 1870px) {
     width: 1760px;
     min-width: 1760px;
+    .header-container {
+      width: 1760px;
+      min-width: 1760px;
+    }
   }
 
   @media (max-width: 1760px) and (min-width: 1471px) {
     width: 1470px;
     min-width: 1470px;
-    // .me-all {
-    //   display: none;
-    // }
+    .header-container {
+      width: 1470px;
+      min-width: 1470px;
+    }
     .me {
-      //display: none;
       height: 300px !important;
       width: 400px !important;
       object-fit: contain !important;
@@ -46,8 +51,11 @@ body {
   @media (max-width: 1470px) {
     width: 1280px;
     min-width: 1280px;
+    .header-container {
+      width: 1280px;
+      min-width: 1280px;
+    }
     .me {
-      //display: none;
       height: 300px !important;
       width: 400px !important;
       object-fit: contain !important;
@@ -56,12 +64,17 @@ body {
   @media (max-width: 1280px) {
     width: 976px;
     min-width: 976px;
+
+    .header-container {
+      width: 976px;
+      min-width: 976px;
+    }
     .me {
-      //display: none;
       height: 250px !important;
       width: 350px !important;
       object-fit: contain !important;
     }
+
 
     @media (max-width: 1250px) {
       .me-all {
@@ -69,9 +82,21 @@ body {
       }
     }
   }
+
+  @media (max-width: 1035px) and (min-width: 500px) {
+    .about-line {
+      display: none !important;
+    }
+  }
+
   @media (max-width: 976px) and (min-width: 481px) {
     width: 768px;
     min-width: 768px;
+
+    .header-container {
+      width: 768px;
+      min-width: 768px;
+    }
     .me-all {
       margin-right: 15% !important;
       width: 70% !important;
@@ -112,23 +137,29 @@ header {
   position: absolute;
   top: 0px;
   z-index: 10;
-  .inner-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    .navigation {
-      nav {
-        a {
-          margin: 0 20px;
-          text-decoration: none;
-          letter-spacing: 1.75px;
-          text-transform: uppercase;
-          font-size: 1rem;
-          color: $white;
-          font-family: $font;
-          &:last-child {
-            margin-right: 0px;
+  .header-container {
+    width: 1870px;
+    min-width: 1870px;
+    margin: 0 auto;
+    z-index: -1;
+    .inner-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      .navigation {
+        nav {
+          a {
+            margin: 0 20px;
+            text-decoration: none;
+            letter-spacing: 1.75px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: $white;
+            font-family: $font;
+            &:last-child {
+              margin-right: 0px;
+            }
           }
         }
       }
@@ -212,7 +243,18 @@ header {
       font-weight: bold;
       font-size: 3vw;
       font-family: $font;
+
     }
+    .about-line{
+      display: inline-block;
+      vertical-align: middle;
+      width: 55%;
+      margin-inline-start: 15px !important;
+      margin-right: 0% !important;
+      
+    
+    }
+    
     .about-me-description {
       color: $white;
       margin-top: 1%;
@@ -221,6 +263,90 @@ header {
       font-family: $font;
       display: flex;
     }
+  }
+}
+
+.experience-container {
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1800px;
+  width: 100%;
+  height: 56%;
+  position: absolute;
+  background-color: $background;
+  .experience-all {
+    max-height: 400px !important;
+    max-width: 750px;
+    margin-left: 25%;
+    .experience-position {
+      color: $white;
+      font-family: $font;
+      font-size: 1.5vw;
+    }
+    .experience-date {
+      color: $white;
+      font-family: $font;
+      font-size: 1.5vw;
+    }
+    .experience-title {
+      color: $lightblue;
+      background-color: $background;
+      font-weight: bold;
+      font-size: 3vw;
+      font-family: $font;
+    }
+    .experience-list {
+      display: block;
+      position: relative;
+      width: max-content;
+      list-style-type: none;
+      color: $background;
+      margin-top: 20px !important;
+      margin-left: -5px;
+      padding: 0;
+    }
+    ul > li {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+    }
+  }
+  .experience-button-clicked {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    background-color: $background;
+    color: $lightblue;
+    text-decoration: none;
+    font-size: 2vw;
+    font-family: $font;
+    z-index: 30;
+    text-decoration-skip-ink: auto;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    outline: none;
+    margin-right: 15px;
+  }
+  .experience-button-not-clicked {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    background-color: $background;
+    color: $white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: $font;
+    z-index: 30;
+    text-decoration-skip-ink: auto;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    outline: none;
+    margin-right: 15px;
   }
 }
 
@@ -300,6 +426,12 @@ header {
       }
     }
   }
+  @media (max-width: 360px){
+    .about-line {
+      display: none !important;
+    }
+  }
+
 }
 
 //iPad View

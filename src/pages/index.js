@@ -5,7 +5,7 @@ import Header from "../components/header"
 import "../styles/styles.scss"
 import Introduction from "../components/introduction"
 import AboutMe from "../components/aboutMe"
-
+import Experience from "../components/experience"
 
 const IndexPage = () => {
   return (
@@ -20,13 +20,13 @@ const IndexPage = () => {
       <Header />
       <Introduction/>
       <AboutMe />
+      <Experience company="SalonEverywhere" jobTitle="Developer" dates="May 2020 to August 2020" description="pleb"/>
       <a href="https://github.com/areezvisram" target="_blank">
         <Github />
       </a>
       <a href="https://www.linkedin.com/in/areezvisram/" target="_blank">
         <LinkedIn />
       </a>
-
 
 
     </div>
