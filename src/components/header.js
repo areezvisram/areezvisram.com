@@ -19,7 +19,7 @@ const Header = () => (
           <nav>
             <AnchorLink to="/#about">About</AnchorLink>
             <AnchorLink to="/#experience">Experience</AnchorLink>
-            <Link to="/work">Projects</Link>
+            <AnchorLink to="/#projects">Projects</AnchorLink>
             <Link to="/contact">Contact</Link>
             <Link to="/resume">Resume</Link>
           </nav>

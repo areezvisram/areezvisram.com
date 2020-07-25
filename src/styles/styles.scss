@@ -75,7 +75,6 @@ body {
       object-fit: contain !important;
     }
 
-
     @media (max-width: 1250px) {
       .me-all {
         margin-right: 8% !important;
@@ -85,6 +84,9 @@ body {
 
   @media (max-width: 1035px) and (min-width: 500px) {
     .about-line {
+      display: none !important;
+    }
+    .experience-line {
       display: none !important;
     }
   }
@@ -243,18 +245,15 @@ header {
       font-weight: bold;
       font-size: 3vw;
       font-family: $font;
-
     }
-    .about-line{
+    .about-line {
       display: inline-block;
       vertical-align: middle;
       width: 55%;
       margin-inline-start: 15px !important;
       margin-right: 0% !important;
-      
-    
     }
-    
+
     .about-me-description {
       color: $white;
       margin-top: 1%;
@@ -266,11 +265,12 @@ header {
   }
 }
 
+//Experience full screen
 .experience-container {
   z-index: 20;
   display: flex;
   flex-direction: row;
-  margin-top: 1800px;
+  margin-top: 2000px;
   width: 100%;
   height: 56%;
   position: absolute;
@@ -295,6 +295,13 @@ header {
       font-weight: bold;
       font-size: 3vw;
       font-family: $font;
+    }
+    .experience-line {
+      display: inline-block;
+      vertical-align: middle;
+      width: 55%;
+      margin-inline-start: 15px !important;
+      margin-right: 0% !important;
     }
     .experience-list {
       display: block;
@@ -348,6 +355,119 @@ header {
     outline: none;
     margin-right: 15px;
   }
+  .experience-description-list {
+    color: $white;
+    font-size: 1.25vw;
+    list-style: none;
+  }
+  .experience-description-list li::before {
+    content: "\2022";
+    color: $white;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  .SE-Environment {
+    color: $white;
+    font-size: 1.25vw;
+  }
+}
+
+.projects-container {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3500px;
+  width: 100%;
+  height: 56%;
+  position: absolute;
+  background-color: $background;
+  .projects-all {
+    max-height: 400px !important;
+    max-width: 2000px;
+    margin-left: 20%;
+    .projects-title {
+      color: $lightblue;
+      background-color: $background;
+      font-weight: bold;
+      font-size: 3vw;
+      font-family: $font;
+      margin-left: 15%;
+    }
+    .projects-line {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30%;
+      margin-inline-start: 20px !important;
+      margin-right: 0% !important;
+    }
+
+  }
+}
+
+.individual-project {
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  border: 1px solid $white;
+  margin-top: 50px;
+  margin-right: 50px;
+  background-color: #102457 !important;
+  
+  .individual-project-title {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.35vw;
+    color: $lightblue;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .individual-project-description {
+    margin-top: 5px;
+    height: 200px;
+    text-align: left;
+    margin-left: 15px;
+    width: 95%;
+    font-size: 1.2vw;
+    color: $white;
+  }
+
+  .individual-project-languages {
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 1.2vw;
+    color: #B5B7BC;
+    word-spacing: 10px;
+  }
+
+  .project-github {
+    height: 30px;
+    width: 30px;
+    fill: #ffffff;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+  }
+}
+.individual-project:hover {
+  transform: scale(1.15);
+  .project-github {
+    display: initial;
+  }
+}
+
+.contact-container {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5000px;
+  width: 100%;
+  height: 56%;
+  position: absolute;
+  background-color: $background;
 }
 
 //Mobile view
@@ -426,12 +546,48 @@ header {
       }
     }
   }
-  @media (max-width: 360px){
-    .about-line {
-      display: none !important;
+  .experience-container {
+    width: 100%;
+    overflow: break-word !important;
+    .experience-all {
+      margin-left: 5%;
+      width: 90%;
+    }
+    .experience-title {
+      font-size: 1.5rem !important;
+    }
+    .experience-button-clicked {
+      font-size: 1.3rem !important;
+      margin-right: 5px !important;
+    }
+    .experience-button-not-clicked {
+      font-size: 1.3rem !important;
+      margin-right: 5px !important;
+    }
+    .experience-position {
+      font-size: 1.2rem !important;
+    }
+    .experience-date {
+      font-size: 1.2rem !important;
+    }
+    .experience-description {
+      left: 0px !important;
+      .experience-description-list {
+        font-size: 1rem;
+      }
+    }
+    .SE-Environment {
+      font-size: 1rem;
     }
   }
-
+}
+@media (max-width: 360px) {
+  .about-line {
+    display: none !important;
+  }
+  .experience-line {
+    display: none !important;
+  }
 }
 
 //iPad View
@@ -495,6 +651,34 @@ header {
       }
     }
   }
+  .experience-container {
+    width: 100%;
+    .experience-all {
+      margin-left: 5%;
+      overflow-wrap: break-word;
+    }
+    .experience-title {
+      font-size: 1.5rem;
+    }
+    .experience-button-clicked {
+      font-size: 1.3rem;
+    }
+    .experience-button-not-clicked {
+      font-size: 1.3rem;
+    }
+    .experience-position {
+      font-size: 1.2rem;
+    }
+    .experience-date {
+      font-size: 1.2rem;
+    }
+    .experience-description-list {
+      font-size: 1.1rem;
+    }
+    .SE-Environment {
+      font-size: 1.1rem;
+    }
+  }
 }
 
 //Between full screen and iPad view
@@ -539,6 +723,35 @@ header {
       }
       .about-me-description {
         font-size: 1.25rem;
+      }
+    }
+  }
+
+  .experience-container {
+    width: 100%;
+    .experience-all {
+      overflow-wrap: break-word;
+      width: 60%;
+      .experience-title {
+        font-size: 2rem;
+      }
+      .experience-button-clicked {
+        font-size: 1.35rem;
+      }
+      .experience-button-not-clicked {
+        font-size: 1.35rem;
+      }
+      .experience-position {
+        font-size: 1.25rem;
+      }
+      .experience-date {
+        font-size: 1.25rem;
+      }
+      .experience-description-list {
+        font-size: 1.2rem;
+      }
+      .SE-Environment {
+        font-size: 1.2rem;
       }
     }
   }

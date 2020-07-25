@@ -1,12 +1,12 @@
 import React from "react"
 
-const Github = () => {
+const Github = ({ style }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 438.549 438.549"
-      className = "github"
+      className = {style}
     >
       <title>Github</title>
       
