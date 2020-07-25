@@ -6,6 +6,7 @@ const Projects = () => {
         <div className="projects-container" id="projects">
             <div className="projects-all">
                 <div className="projects-title">Projects <hr className="projects-line"></hr></div>
+                <div className="project-mobile-explain">Please click on a project to view its links!</div>
                 <IndividualProject projectTitle={'AI Sketches a Photo'} description={'This AI takes a real-life photo and draws two pencil sketches of the photo. Utilizes the Canny edge detection algorithm to isolate major edges and fill with background noise.'} languages={'Python'} githubLink={'https://github.com/areezvisram/AI-Sketches-a-Photo'}/>
                 <IndividualProject projectTitle={'Image Recognition AI'} description={'AI designed to identify every-day objects such as soccer balls and cars. Trained on ImageAI image dataset. Returns percentage likelihood of object identification when passed an image.'} languages={'Jupyter Python'} githubLink={'https://github.com/areezvisram/Image-Recognition-AI'}/>
                 <IndividualProject projectTitle={'PillsOnWheels'} description={'Mobile app designed to let users order and organize their prescriptions. Built for a two-sided marketplace of drivers and customers. Available on Google Play.'} languages={'React-Native JavaScript Flask'} githubLink={'https://github.com/areezvisram/Pills-on-Wheels-HTNE'}/>
