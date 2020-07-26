@@ -415,7 +415,6 @@ header {
       margin-inline-start: 20px !important;
       margin-right: 0% !important;
     }
-
   }
 }
 
@@ -427,7 +426,7 @@ header {
   margin-top: 50px;
   margin-right: 50px;
   background-color: #102457 !important;
-  
+
   .individual-project-title {
     margin-top: 5px;
     text-align: center;
@@ -451,7 +450,7 @@ header {
     margin-left: 15px;
     margin-top: 20px;
     font-size: 1.2vw;
-    color: #B5B7BC;
+    color: #b5b7bc;
     word-spacing: 10px;
   }
 
@@ -476,11 +475,129 @@ header {
   z-index: 20;
   display: flex;
   flex-direction: column;
-  margin-top: 8000px;
+  margin-top: 6200px;
   width: 100%;
   height: 56%;
   position: absolute;
   background-color: $background;
+  .contact-all {
+    max-height: 400px !important;
+    max-width: 750px;
+    margin-left: 31%;
+    .contact-title {
+      color: $lightblue;
+      background-color: $background;
+      font-weight: bold;
+      font-size: 3vw;
+      font-family: $font;
+    }
+    .contact-line {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40%;
+      margin-inline-start: 20px !important;
+      margin-right: 0% !important;
+    }
+    .contact-form {
+      width: 100%;
+      .section1 {
+        float: left;
+        margin-right: 50px;
+        margin-top: -70px;
+        .contact-label-name {
+          color: $lightblue;
+          display: block;
+          font-size: 1.5vw;
+          width: max-content;
+        }
+        .contact-input-name {
+          margin-bottom: 20px;
+          margin-top: 10px;
+          background-color: #102457;
+          width: 300px;
+          height: 50px;
+          color: $white;
+          font-size: 1vw;
+          text-indent: 5px;
+          display: block;
+        }
+      }
+      .section2 {
+        float: left;
+        margin-top: -70px;
+        .contact-label-email {
+          color: $lightblue;
+          display: block;
+          font-size: 1.5vw;
+          width: max-content;
+        }
+        .contact-input-email {
+          margin-bottom: 20px;
+          margin-top: 10px;
+          background-color: #102457;
+          width: 300px;
+          height: 50px;
+          color: $white;
+          font-size: 1vw;
+          text-indent: 5px;
+          display: block;
+        }
+      }
+      .contact-label-message {
+        color: $lightblue;
+        display: block;
+        margin-top: 100px;
+        font-size: 1.5vw;
+        width: max-content;
+      }
+      .contact-input-message {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        background-color: #102457;
+        width: 660px;
+        height: 200px;
+        color: $white;
+        font-size: 1vw;
+        text-indent: 5px;
+        display: block;
+        font-family: $font !important;
+        resize: none;
+        outline: none;
+      }
+
+      .contact-submit-button {
+        color: $lightblue;
+        background-color: #102457;
+        font-family: $font;
+        font-size: 2vw;
+        width: 20%;
+        margin-left: 30%;
+      }
+    }
+  }
+}
+
+.footer-container {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6800px;
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  background-color: $background;
+  .built-by {
+    color: $white;
+    margin-left: 40%;
+    font-size: 2vw;
+    margin-bottom: 5px;
+  }
+  .view-on-github {
+    color: $white;
+
+    margin-left: 42%;
+    font-size: 2vw;
+  }
 }
 
 //Mobile view
@@ -604,8 +721,6 @@ header {
       font-size: 1.5rem !important;
     }
 
-
-
     .individual-project {
       width: 100%;
       .individual-project-title {
@@ -618,7 +733,6 @@ header {
       .individual-project-languages {
         font-size: 1.2rem;
       }
-
     }
     .individual-project:hover {
       transform: scale(1.02);
@@ -626,6 +740,61 @@ header {
         display: initial;
         margin-left: 5%;
       }
+    }
+  }
+
+  .contact-container {
+    width: 100%;
+    .contact-all {
+      margin-left: 3%;
+      width: 90%;
+    }
+    .contact-title {
+      font-size: 1.5rem !important;
+    }
+    .section1 {
+      .contact-label-name {
+        font-size: 1.35rem !important;
+        margin-top: 0px !important;
+      }
+      .contact-input-name {
+        font-size: 1.2rem !important;
+        margin-top: 10px !important;
+        margin-bottom: 50px !important;
+        width: 100% !important;
+      }
+    }
+    .section2 {
+      .contact-label-email {
+        font-size: 1.35rem !important;
+        margin-top: 40px !important;
+      }
+
+      .contact-input-email {
+        font-size: 1.2rem !important;
+        width: 100% !important;
+      }
+    }
+    .contact-label-message {
+      font-size: 1.35rem !important;
+    }
+    .contact-input-message {
+      font-size: 1.2rem !important;
+      width: 95% !important;
+    }
+    .contact-submit-button {
+      font-size: 1.35rem !important;
+      width: 30% !important;
+    }
+  }
+  .footer-container {
+    .built-by {
+      font-size: 1.35rem !important;
+      margin-left: 20%;
+    }
+    .view-on-github {
+      font-size: 1.35rem !important;
+      margin-left: 25%;
     }
   }
 }
@@ -646,6 +815,10 @@ header {
   }
 
   .projects-line {
+    display: none !important;
+  }
+
+  .contact-line {
     display: none !important;
   }
 }
@@ -760,8 +933,61 @@ header {
         font-size: 1.35rem;
       }
     }
+  }
 
+  .contact-container {
+    width: 100%;
+    .contact-all {
+      margin-left: 3%;
+      width: 90%;
+    }
+    .contact-title {
+      font-size: 1.5rem !important;
+    }
+    .section1 {
+      .contact-label-name {
+        font-size: 1.4rem !important;
+        margin-top: 30px !important;
+      }
+      .contact-input-name {
+        font-size: 1.3rem !important;
+        margin-top: 10px !important;
+        margin-bottom: 50px !important;
+        width: 100% !important;
+      }
+    }
+    .section2 {
+      .contact-label-email {
+        font-size: 1.4rem !important;
+        margin-top: 30px !important;
+      }
 
+      .contact-input-email {
+        font-size: 1.3rem !important;
+        width: 100% !important;
+      }
+    }
+    .contact-label-message {
+      font-size: 1.4rem !important;
+    }
+    .contact-input-message {
+      font-size: 1.3rem !important;
+      width: 95% !important;
+    }
+    .contact-submit-button {
+      font-size: 1.4rem !important;
+      width: 30% !important;
+    }
+  }
+  .footer-container {
+    .built-by {
+      font-size: 1.4rem !important;
+      margin-left: 20%;
+    }
+    .view-on-github {
+      font-size: 1.4rem !important;
+      margin-left: 25%;
+    }
   }
 }
 
@@ -859,6 +1085,79 @@ header {
         font-size: 1.3rem;
       }
     }
+  }
 
+  .contact-container {
+    width: 100%;
+    .contact-all {
+      width: 60%;
+      .contact-title {
+        font-size: 2rem !important;
+        .section1 {
+          .contact-label-name {
+            font-size: 1.75rem !important;
+            margin-top: 0px !important;
+          }
+          .contact-input-name {
+            font-size: 1.75rem !important;
+            margin-top: 10px !important;
+            margin-bottom: 50px !important;
+            width: 100% !important;
+          }
+        }
+        .section2 {
+          .contact-label-email {
+            font-size: 1.75rem !important;
+            margin-top: 40px !important;
+          }
+
+          .contact-input-email {
+            font-size: 1.75rem !important;
+            width: 100% !important;
+          }
+        }
+        .contact-label-message {
+          font-size: 1.75rem !important;
+        }
+        .contact-input-message {
+          font-size: 1.75rem !important;
+          width: 95% !important;
+        }
+        .contact-submit-button {
+          font-size: 1.75rem !important;
+          width: 30% !important;
+        }
+      }
+      .footer-container {
+        .built-by {
+          font-size: 1.6rem !important;
+          margin-left: 20%;
+        }
+        .view-on-github {
+          font-size: 1.6rem !important;
+          margin-left: 25%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 770px) {
+  .contact-all {
+    width: 60% !important;
+    .contact-input-name {
+      width: 150px !important;
+      height: 30px !important;
+      font-size: 1.1rem !important;
+    }
+    .contact-input-email {
+      width: 150px !important;
+      height: 30px !important;
+      font-size: 1.1rem !important;
+    }
+    .contact-input-message {
+      width: 80% !important;
+      font-size: 1.1rem !important;
+    }
   }
 }

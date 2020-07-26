@@ -81,7 +81,7 @@ const Experience = () => {
               <li>Gained experience in using RESTful API calls with various API's such as Instagram, Facebook, Pinterest, Shopify, Thinkific</li>
               <li>Contributed to and participated in daily check-in meetings, design briefs and code reviews</li>
             </ul>
-            <div className="SE-Environment">Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst</div>
+            <div className="SE-Environment">Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst, AWS</div>
           </div>
         </div>
         <div className="experience-description-container" id="MISAdesc" style={{display:'none'}}>

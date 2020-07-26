@@ -20,7 +20,7 @@ const Header = () => (
             <AnchorLink to="/#about">About</AnchorLink>
             <AnchorLink to="/#experience">Experience</AnchorLink>
             <AnchorLink to="/#projects">Projects</AnchorLink>
-            <Link to="/contact">Contact</Link>
+            <AnchorLink to="/#contact">Contact</AnchorLink>
             <Link to="/resume">Resume</Link>
           </nav>
         </div>

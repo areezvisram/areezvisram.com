@@ -8,6 +8,7 @@ import AboutMe from "../components/aboutMe"
 import Experience from "../components/experience"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
+import Footer from "../components/footer"
 
 const IndexPage = () => {
   return (
@@ -25,13 +26,14 @@ const IndexPage = () => {
       <Experience/>
       <Projects />
       <Contact />
+      <Footer />
       <a href="https://github.com/areezvisram" target="_blank">
         <Github style={'github'} />
       </a>
       <a href="https://www.linkedin.com/in/areezvisram/" target="_blank">
         <LinkedIn />
       </a>
-
+      
 
     </div>
   )
