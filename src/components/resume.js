@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-const Resume =() => {
+const Resume =({ onClickFunction }) => {
     const myexamplePdf = useStaticQuery(graphql`
     {
       pdf: file(relativePath: { eq: "Resume.pdf" }) {
@@ -12,7 +12,7 @@ const Resume =() => {
     }
   `)
     return (
-        <Link to={myexamplePdf.pdf.publicURL}>Resume</Link>
+        <a href={myexamplePdf.pdf.publicURL} target="_blank" className="resume-link" onClick={onClickFunction}>Resume</a>
     )
 }
 

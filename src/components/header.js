@@ -2,17 +2,18 @@ import { Link,useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import Logo from "./logo"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import Resume from "./resume"
 
 const Header = () => {
-  const myexamplePdf = useStaticQuery(graphql`
-    {
-      pdf: file(relativePath: { eq: "Resume.pdf" }) {
-        name
-        extension
-        publicURL
-      }
-    }
-  `)
+  // const myexamplePdf = useStaticQuery(graphql`
+  //   {
+  //     pdf: file(relativePath: { eq: "Resume.pdf" }) {
+  //       name
+  //       extension
+  //       publicURL
+  //     }
+  //   }
+  // `)
   return (
     <header
       style={{
@@ -31,7 +32,7 @@ const Header = () => {
               <AnchorLink to="/#experience">Experience</AnchorLink>
               <AnchorLink to="/#projects">Projects</AnchorLink>
               <AnchorLink to="/#contact">Contact</AnchorLink>
-              <a href={myexamplePdf.pdf.publicURL} target="_blank">Resume</a>
+              <Resume />
             </nav>
           </div>
         </div>
