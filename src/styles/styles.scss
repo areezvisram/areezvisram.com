@@ -14,7 +14,7 @@ body {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .background {
@@ -604,55 +604,72 @@ header {
   }
 }
 
-.bm-item {
-  display: inline-block;
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-}
+.burger-menu {
+  display: none;
+  .bm-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: $white;
+    transition: color 0.2s;
+  }
 
-.bm-item:hover {
-  color: white;
-}
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 25px;
+    top: 36px;
+  }
 
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 36px;
-}
+  .bm-burger-bars {
+    background: $white;
+  }
 
-.bm-burger-bars {
-  background: #373a47;
-}
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
 
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
+  .bm-cross {
+    background: $white;
+  }
 
-.bm-cross {
-  background: #bdc3c7;
-}
+  .bm-menu {
+    background:$background;
+    padding: 3em 3em 0;
+    font-size: 1.75em;
+  }
 
-.bm-menu {
-  background: #000;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
+  .bm-item-list {
+    color: $white;
+  }
 
-.bm-morph-shape {
-  fill: #373a47;
-}
+  .bm-overlay {
+    background: $background;
+    
+  }
 
-.bm-item-list {
-  color: #b8b7ad;
-}
+  .burger-github {
+    height: 50px;
+    width: 50px;
+    fill: #ffffff;
+    position: fixed;
+    bottom: 12%;
+    left: 150px;
+    z-index: 20;
+  }
 
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  .burger-linkedin {
+    height: 50px;
+    width: 50px;
+    fill: #ffffff;
+    position: fixed;
+    bottom: 12%;
+    left: 230px;
+    z-index: 20;
+  }
 }
 
 //Mobile view
@@ -858,6 +875,9 @@ header {
     }
   }
 
+  .burger-menu {
+    display: initial;
+  }
 }
 @media (max-width: 414px) {
   .project-mobile-explain {

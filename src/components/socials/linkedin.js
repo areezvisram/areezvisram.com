@@ -1,12 +1,12 @@
 import React from "react"
 
-const LinkedIn = () => {
+const LinkedIn = ({ style }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 430.117 430.117"
-      className="linkedin"
+      className={style}
     >
       <title>LinkedIn</title>
       <path

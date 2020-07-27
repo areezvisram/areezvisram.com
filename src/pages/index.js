@@ -27,7 +27,7 @@ const IndexPage = () => {
         <Github style={'github'} />
       </a>
       <a href="https://www.linkedin.com/in/areezvisram/" target="_blank">
-        <LinkedIn />
+        <LinkedIn style={'linkedin'} />
       </a>
       
 
