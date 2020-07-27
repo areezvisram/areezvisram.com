@@ -9,16 +9,11 @@ import Experience from "../components/experience"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
+import Burger from "../components/burger"
 
 const IndexPage = () => {
   return (
-    <div className="container"
-      style={{
-        background: "#101357",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
+    <div>
       
       <Header />
       <Introduction/>
@@ -27,6 +22,7 @@ const IndexPage = () => {
       <Projects />
       <Contact />
       <Footer />
+      <Burger />
       <a href="https://github.com/areezvisram" target="_blank">
         <Github style={'github'} />
       </a>
