@@ -1,5 +1,6 @@
 # My Personal Website
 ### http://areezvisram.com
+![websiteSS](https://user-images.githubusercontent.com/57966832/88596291-c75e2700-d032-11ea-96cd-c25cfb14eff2.PNG)
 #### Description: 
 * Built with GatsbyJS and React. Styling done with SCSS
 * Fully responsive for all devices, desktop and mobile
