@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Resume =({ onClickFunction }) => {
     const myexamplePdf = useStaticQuery(graphql`
