@@ -13,6 +13,7 @@ const Projects = () => {
                 <IndividualProject projectTitle={'COVID Inventory Management'} description={'Medical supply inventory management web application. Identifies amounts of medical supplies in locations across Canada and suggests areas most in need of supplies.'} languages={'HTML/CSS Flask JavaScript'} githubLink={'https://github.com/areezvisram/RUHacks-2020-COVID-19-Inventory-Management'}/>
                 <IndividualProject projectTitle={'MyCourses'} description={'Application designed to ease the process of post-secondary course research. Incorporates a secure login system and allows user to create a customizable timetable based on program and school.'} languages={'Java JavaFX'} githubLink={'https://github.com/areezvisram/MyCourses'}/>
                 <IndividualProject projectTitle={'NHL Fantasy Recommender'} description={'Utilizes the NHL API to recommend best players for NHL fantasy teams. Incorporates a detailed algorithm to suggest best players for fantasy purposes. Allows building of preview fantasy teams.'} languages={'JavaScript ElectronJS HTML/CSS'}/>
+                <IndividualProject projectTitle={'My Personal Website'} description={'Built my personal website to showcase my portfolio and skills. Shows information about my software skills, experience and projects. Responsive to any web browser or mobile device.'} languages={'GatsbyJS HTML/CSS React'} githubLink={'https://github.com/areezvisram/areezvisram.com'} />
             </div>
         </div>
     )

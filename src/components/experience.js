@@ -72,16 +72,20 @@ const Experience = () => {
           <div className="experience-date">May 2020 - August 2020</div>
           <div className="experience-description">
             <ul className="experience-description-list">
-              <li>Part of web app development team, worked on frontend in Liquid, as well as backend in platformOS, GraphQL</li>
-              <li>Built a variety of projects, such as chrome extensions, data scrapers, and integrations with applications such as Shopify and Thinkific</li>
+              <li>Part of web app development team, worked on frontend in Liquid, backend in platformOS, GraphQL</li>
+              <li>Built a chrome extension to automatically send Instagram and Facebook posts to portfolio boards in SalonEverywhere</li>
+              <li>Built a chrome extension to add any image from any webpage to an inspiration board in SalonEverywhere</li>
+              <li>Built a chrome extension to auto import stylist Yelp reviews into SalonEverywhere</li>
+              <li>Built integrations between SalonEverywhere and other applications such as Shopify and Thinkific </li>
               <li>Built an AI data pipeline to tag Instagram images with the beauty category they represent</li>
               <li>Performed data science analysis to determine best keywords for SEO purposes</li>
               <li>Built an automated workflow in Zoho CRM to track consumer registration</li>
               <li>Built an automated workflow in Zoho Marketing Hub, Desk, and Pages to track user registration and progress on the site</li>
-              <li>Gained experience in using RESTful API calls with various API's such as Instagram, Facebook, Pinterest, Shopify, Thinkific</li>
+              <li>Set up connections and integrations between various technology stacks such as Instagram, Facebook, Pinterest, Shopify, Thinkific through RESTful and GraphQL API Calls</li>
               <li>Contributed to and participated in daily check-in meetings, design briefs and code reviews</li>
+              <li>Performed unit and end-to-end testing of web app and applications</li>
             </ul>
-            <div className="SE-Environment">Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst, AWS</div>
+            <div className="SE-Environment">Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst, AWS, Zoho CRM, MarketingHub, Desk, Pages, PageSense, Analytics</div>
           </div>
         </div>
         <div className="experience-description-container" id="MISAdesc" style={{display:'none'}}>
@@ -90,7 +94,7 @@ const Experience = () => {
           <div className="experience-description">
             <ul className="experience-description-list">
               <li>Member of executive team in McMaster Ismaili Students Association</li>
-              <li>Responsible fopr organizing and running events for members of the club</li>
+              <li>Responsible for organizing and running events for members of the club</li>
               <li>Network with other ISA’s across Ontario regarding events and participation</li>
               <li>Participate in and contriubte to weekly executive team meetings</li>
             </ul>
