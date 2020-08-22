@@ -1,8 +1,8 @@
 import React from 'react'
 import GitHub from './socials/github'
-import GooglePlay from "./socials/googlePlay"
+import GoogleChrome from "./socials/googleChrome"
 
-const IndividualProject = ({ projectTitle, description, githubLink, languages, googlePlay }) => {
+const IndividualProjectGC = ({ projectTitle, description, githubLink, languages, googlePlay }) => {
     return (
         <div className="individual-project">
             <div className="individual-project-title">{projectTitle}</div>
@@ -11,8 +11,11 @@ const IndividualProject = ({ projectTitle, description, githubLink, languages, g
             <a href={githubLink} target="_blank" >
                 <GitHub style={'project-github'} />
             </a>
+            <a href="https://chrome.google.com/webstore/detail/toronto-maple-leafs-chrom/llkoeoikpnfmnabgdmhoedbbpbeianii" target="_blank">
+                <GoogleChrome style={'google-chrome'} />
+            </a>
         </div>
     )
 }
 
-export default IndividualProject;
+export default IndividualProjectGC;

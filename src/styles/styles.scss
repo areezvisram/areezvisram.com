@@ -470,6 +470,12 @@ header {
   .project-github {
     display: initial;
   }
+  .google-play {
+    display: initial;
+  }
+  .google-chrome {
+    display: initial;
+  }
 }
 
 .contact-container {
@@ -821,6 +827,12 @@ header {
         display: initial;
         margin-left: 5%;
       }
+      .google-play {
+        display: initial;
+      }
+      .google-chrome {
+        display: initial;
+      }
     }
   }
 
@@ -908,6 +920,39 @@ header {
   }
 }
 
+.google-play {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 45px;
+  bottom: 10px;
+  display: none;
+  .upper {
+    fill:#5abc6a;
+  }
+  .right {
+    fill: #fac013
+  }
+  
+  .left {
+    fill: #41beed
+  }
+  
+  .lower {
+    fill: #e94957
+  }
+}
+
+.google-chrome {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  display: none;
+}
+
+
 //iPad View
 @media only screen and (max-width: 773px) and (min-width: 481px) {
   .navigation {
@@ -989,10 +1034,10 @@ header {
       font-size: 1.3rem;
     }
     .experience-position {
-      font-size: 1.2rem;
+      font-size: 1.2rem !important; 
     }
     .experience-date {
-      font-size: 1.2rem;
+      font-size: 1.2rem !important;
     }
     .experience-description-list {
       font-size: 1.1rem;

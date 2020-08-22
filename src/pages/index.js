@@ -10,27 +10,36 @@ import Projects from "../components/projects"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
 import Burger from "../components/burger"
+import SEO from "../components/seo"
+import { Helmet } from "react-helmet"
+import googlePlay from "../components/socials/googlePlay"
 
 const IndexPage = () => {
   return (
     <div>
-      
+      <Helmet>
+        <meta
+          name="home page"
+          content="this is the home page of Areez Visram's website"
+        />
+        <title>Areez Visram</title>
+        <link rel="canonical" href="http://areezvisram.com" />
+      </Helmet>
+      <SEO title="Areez Visram" />
       <Header />
-      <Introduction/>
+      <Introduction />
       <AboutMe />
-      <Experience/>
+      <Experience />
       <Projects />
       <Contact />
       <Footer />
       <Burger />
       <a href="https://github.com/areezvisram" target="_blank">
-        <Github style={'github'} />
+        <Github style={"github"} />
       </a>
       <a href="https://www.linkedin.com/in/areezvisram/" target="_blank">
-        <LinkedIn style={'linkedin'} />
+        <LinkedIn style={"linkedin"} />
       </a>
-      
-
     </div>
   )
 }

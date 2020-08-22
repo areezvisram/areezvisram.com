@@ -17,8 +17,8 @@ const aboutMe = () => {
           related projects.
         </div>
         <div className="about-me-description">
-          I'm currently studying Software Engineering at McMaster University,
-          with a minor in Innovation and Entrepreneurship.
+          I'm currently studying Software Engineering with a minor in Innovation
+          and Entrepreneurship at McMaster University.
         </div>
       </div>
       <MyPicture />
