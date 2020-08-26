@@ -94,7 +94,8 @@ const Experience = () => {
           </div>
         </div>
         <div className="experience-description-container" id="MISAdesc" style={{display:'none'}}>
-          <div className="experience-position">Executive Team Member of MISA</div>
+          <div className="experience-position">Executive Team Member</div>
+          <div className="experience-position">McMaster Ismaili Students Association</div>
           <div className="experience-date">September 2019 - April 2020</div>
           <div className="experience-description">
             <ul className="experience-description-list">
@@ -106,7 +107,8 @@ const Experience = () => {
           </div>
         </div>
         <div className="experience-description-container" id="BCdesc" style={{display:'none'}}>
-          <div className="experience-position">Lifeguard at B&C Aquatics</div>
+          <div className="experience-position">Lifeguard</div>
+          <div className="experience-position">B&C Aquatics</div>
           <div className="experience-date">January 2016 - August 2019</div>
           <div className="experience-description">
             <ul className="experience-description-list">
