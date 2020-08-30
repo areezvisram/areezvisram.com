@@ -19,8 +19,8 @@ const IndexPage = () => {
     <div>
       <Helmet>
         <meta
-          name="home page"
-          content="this is the home page of Areez Visram's website"
+          name="description"
+          content="Areez Visram Personal Website - Software Engineer"
         />
         <title>Areez Visram</title>
         <link rel="canonical" href="http://areezvisram.com" />
