@@ -73,22 +73,16 @@ const Experience = () => {
           <div className="experience-date">May 2020 - August 2020</div>
           <div className="experience-description">
             <ul className="experience-description-list">
-              <li>One of the earliest developers at the company, helped take the company from startup to an initial launch</li>
-              <li>Performed frontend web design in Liquid, HTML, CSS, biult and designed various site pages</li>
+              <li>One of the earliest developers at the company, helped take the company from start-up to an initial launch</li>
+              <li>Performed frontend web design in Liquid, HTML, CSS, built and designed various site pages</li>
               <li>Built backend system in platformOS, GraphQL to store and display site data dynamically</li>
-              <li>Developed a chrome extension to automatically send Instagram and Facebook posts to portfolio boards in SalonEverywhere</li>
-              <li>Developed a chrome extension to add any image from any webpage to an inspiration board in SalonEverywhere</li>
-              <li>Developed a chrome extension to auto import stylist Yelp reviews into SalonEverywhere</li>
-              <li>Led a Python web-scraping effort to build a database of beauty industry organizations such as Salons, Brands, Distributors and Acadmies</li>
-              <li>Built integrations between SalonEverywhere and other applications such as Shopify and Thinkific </li>
+              <li>Developed multiple chrome extensions to automatically send Instagram and Facebook posts to portfolio and inspiration boards in SalonEverywhere</li>
+              <li>Used web scraping and data gathering techniques to build a database of 200,000 beauty organizations</li>
+              <li>Built API integrations between SalonEverywhere and other applications such as Shopify and Thinkific</li>
               <li>Developed an AI data pipeline to tag Instagram images with the beauty category they represent</li>
-              <li>Performed data science analysis to determine best keywords for SEO purposes</li>
-              <li>Built an automated workflow in Zoho CRM to track consumer registration</li>
-              <li>Built an automated workflow in Zoho Marketing Hub, Desk, and Pages to track user registration and progress on the site</li>
+              <li>Built an automated workflow in Zoho Business Suite to track consumer registration and progress on the site</li>
               <li>Set up connections and integrations between various technology stacks such as Instagram, Facebook, Pinterest, Shopify, Thinkific through RESTful and GraphQL API Calls</li>
-              <li>Contributed to and participated in daily check-in meetings, design briefs and code reviews</li>
               <li>Performed unit and end-to-end testing of web app and applications</li>
-              <li></li>
             </ul>
             <div className="SE-Environment">Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst, AWS, Zoho CRM, MarketingHub, Desk, Pages, PageSense, Analytics</div>
           </div>
