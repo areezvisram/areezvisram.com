@@ -2,7 +2,7 @@ import React from 'react'
 import GitHub from './socials/github'
 import GoogleChrome from "./socials/googleChrome"
 
-const IndividualProjectGC = ({ projectTitle, description, githubLink, languages, googlePlay }) => {
+const IndividualProjectGC = ({ projectTitle, description, githubLink, languages, link }) => {
     return (
         <div className="individual-project">
             <div className="individual-project-title">{projectTitle}</div>
@@ -11,7 +11,7 @@ const IndividualProjectGC = ({ projectTitle, description, githubLink, languages,
             <a href={githubLink} target="_blank" >
                 <GitHub style={'project-github'} />
             </a>
-            <a href="https://chrome.google.com/webstore/detail/toronto-maple-leafs-chrom/llkoeoikpnfmnabgdmhoedbbpbeianii" target="_blank">
+            <a href={link} target="_blank">
                 <GoogleChrome style={'google-chrome'} />
             </a>
         </div>
