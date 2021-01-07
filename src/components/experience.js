@@ -14,6 +14,10 @@ const Experience = () => {
     SEDesc.style.display = 'none';
     var BCDesc = document.getElementById('BCdesc');
     BCDesc.style.display = 'none';
+    var sigButton = document.getElementById('SIG');
+    sigButton.style.color = '#fff';
+    var sigDesc = document.getElementById('sigDesc');
+    sigDesc.style.display = 'none';
   }
 
   function SEClicked() {
@@ -29,6 +33,10 @@ const Experience = () => {
     SEDesc.style.display = 'block';
     var BCDesc = document.getElementById('BCdesc');
     BCDesc.style.display = 'none';
+    var sigButton = document.getElementById('SIG');
+    sigButton.style.color = '#fff';
+    var sigDesc = document.getElementById('sigDesc');
+    sigDesc.style.display = 'none';
   }
 
   function BCClicked() {
@@ -44,6 +52,29 @@ const Experience = () => {
     SEDesc.style.display = 'none';
     var BCDesc = document.getElementById('BCdesc');
     BCDesc.style.display = 'block';
+    var sigButton = document.getElementById('SIG');
+    sigButton.style.color = '#fff';
+    var sigDesc = document.getElementById('sigDesc');
+    sigDesc.style.display = 'none';
+  }
+
+  function signiantClicked() {
+    var MISAButton = document.getElementById('MISA');
+    MISAButton.style.color = '#fff';
+    var SEButton = document.getElementById('SE');
+    SEButton.style.color = '#fff';
+    var BCButton = document.getElementById('B&C');
+    BCButton.style.color = '#fff'
+    var MISADesc = document.getElementById('MISAdesc');
+    MISADesc.style.display = 'none';
+    var SEDesc = document.getElementById('SEdesc');
+    SEDesc.style.display = 'none';
+    var BCDesc = document.getElementById('BCdesc');
+    BCDesc.style.display = 'none';
+    var sigButton = document.getElementById('SIG');
+    sigButton.style.color = '#5efbda';
+    var sigDesc = document.getElementById('sigDesc');
+    sigDesc.style.display = 'block';
   }
 
   return (
@@ -51,8 +82,13 @@ const Experience = () => {
       <div className="experience-all">
         <div className="experience-title">Experience <hr className="experience-line"></hr></div>
         <ul className="experience-list">
+        <li>
+            <button id="SIG" onClick={signiantClicked} className="experience-button-clicked">
+              <span>Signiant</span>
+            </button>
+          </li>
           <li>
-            <button id="SE" onClick={SEClicked} className="experience-button-clicked">
+            <button id="SE" onClick={SEClicked} className="experience-button-not-clicked">
               <span>SalonEverywhere</span>
             </button>
           </li>
@@ -67,8 +103,29 @@ const Experience = () => {
             </button>
           </li>
         </ul>
-        <div className="experience-description-container" id="SEdesc">
-          <div className="experience-position">Developer</div>
+        <div className="experience-description-container" id="sigDesc">
+          <div className="experience-position">Co-op Software Developer - Full Stack Developer</div>
+          <div className="experience-position">Signiant</div>
+          <div className="experience-date">January 2021 - April 2021 (Ongoing)</div>
+          <div className="experience-description">
+            <ul className="experience-description-list">
+              <li>Full stack developer within the R&D department working on Signiant's Jet and Media Shuttle Products</li>
+              <li>Implemented backend functionality to track number of files queried by account in Media Shuttle product through DataDog metrics</li>
+              <li>Implemented unit and component tests for all features I developed</li>
+              <li>Performed code reviews on team member's code, gave and received feedback on open pull requests</li>
+            </ul>
+            <div className="SE-Environment">
+              Technical Environment: <br></br> JavaScript, NodeJS, ReactJS, ExpressJS
+              <ul className="experience-description-list" style={{marginTop: '2px'}}>
+                <li>AWS: S3, DynamoDB, Step, Lambda, EC2, ECS</li>
+                <li>Testing: Mocha, Chai, Sinon, Proxyquire, Nock</li>
+                <li>Project Management: BitBucket, Confluence, Jira, Trello</li>                
+              </ul>
+            </div>            
+          </div>
+        </div>
+        <div className="experience-description-container" id="SEdesc" style={{display:'none'}}>
+          <div className="experience-position">Developer Intern</div>
           <div className="experience-position">SalonEverywhere</div>
           <div className="experience-date">May 2020 - August 2020</div>
           <div className="experience-description">
@@ -84,7 +141,7 @@ const Experience = () => {
               <li>Set up connections and integrations between various technology stacks such as Instagram, Facebook, Pinterest, Shopify, Thinkific through RESTful and GraphQL API Calls</li>
               <li>Performed unit and end-to-end testing of web app and applications</li>
             </ul>
-            <div className="SE-Environment">Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst, AWS, Zoho CRM, MarketingHub, Desk, Pages, PageSense, Analytics</div>
+            <div className="SE-Environment">Technical Environment: platformOS, Liquid, GraphQL, HTML/CSS, JavaScript, Python, Postman, Deluge, Catalyst, AWS, Zoho CRM, MarketingHub, Desk, Pages, PageSense, Analytics</div>
           </div>
         </div>
         <div className="experience-description-container" id="MISAdesc" style={{display:'none'}}>
