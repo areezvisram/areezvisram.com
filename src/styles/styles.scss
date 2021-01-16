@@ -801,7 +801,7 @@ header {
   }
 
   .projects-container {
-    width: 100%;
+    width: 100%;    
     .projects-all {
       margin-left: 3%;
       width: 90%;
@@ -841,7 +841,8 @@ header {
 
   .contact-container {
     width: 100%;
-    margin-top: 7300px !important;
+    margin-top: 7700px !important;
+    margin-left: 5% !important;
     .contact-all {
       margin-left: 3%;
       width: 90%;
@@ -885,7 +886,7 @@ header {
     }
   }
   .footer-container {
-    margin-top: 7900px !important;
+    margin-top: 8300px !important;
     .built-by {
       font-size: 1.35rem !important;
       margin-left: 20%;
@@ -1078,7 +1079,8 @@ header {
 
   .contact-container {
     width: 100%;
-    margin-top: 7300px !important;
+    margin-top: 6600px !important;
+    margin-left: 5% !important;
     .contact-all {
       margin-left: 3%;
       width: 90%;
@@ -1122,14 +1124,15 @@ header {
     }
   }
   .footer-container {
-    margin-top: 7900px !important;
+    margin-top: 7200px !important;
+    margin-left: 15%;
     .built-by {
       font-size: 1.4rem !important;
       margin-left: 20%;
     }
     .view-on-github {
       font-size: 1.4rem !important;
-      margin-left: 25%;
+      margin-left: 22%;
     }
   }
 }
@@ -1232,7 +1235,7 @@ header {
 
   .contact-container {
     width: 100%;
-    margin-top: 7500px;
+    margin-top: 6800px !important;
     .contact-all {
       width: 60%;
       .contact-title {
@@ -1272,16 +1275,19 @@ header {
           width: 30% !important;
         }
       }
-      .footer-container {
-        .built-by {
-          font-size: 1.6rem !important;
-          margin-left: 20%;
-        }
-        .view-on-github {
-          font-size: 1.6rem !important;
-          margin-left: 25%;
-        }
-      }
+    }
+  }
+
+  .footer-container {
+    margin-top: 7300px !important;
+    margin-left: 200px;
+    .built-by {
+      font-size: 1.6rem !important;
+      margin-left: 20%;
+    }
+    .view-on-github {
+      font-size: 1.6rem !important;
+      margin-left: 22%;
     }
   }
 }
@@ -1308,7 +1314,21 @@ header {
 
 
 @media (max-width: 1530px) {
+  .about-me-container {
+    margin-top: 900px !important;
+  }
+  .experience-container {
+    margin-top: 1600px !important;
+  }
+  .projects-container {
+    margin-top: 2400px !important;
+  }
   .contact-container {
-    margin-top: 5600px;
+    margin-top: 4700px;
+    margin-left: -100px;
+  }
+
+  .footer-container {
+    margin-top: 5300px;
   }
 }

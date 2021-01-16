@@ -110,15 +110,18 @@ const Experience = () => {
           <div className="experience-description">
             <ul className="experience-description-list">
               <li>Full stack developer within the R&D department working on Signiant's Jet and Media Shuttle Products</li>
-              <li>Implemented backend functionality to track number of files queried by account in Media Shuttle product through DataDog metrics</li>
+              <li>Gained experience working in a fast-paced agile story environment in the form of two-week sprints</li>
+              <li>Used NodeJS to implement backend features with a focus on micro-service architecture</li>
+              <li>Developed various frontend features and components using React and Material UI based on strongly UI/UX focused designs</li>
+              <li>Integrated features with cloud services such as AWS's DynamoDB, S3, Lambda and Step Functions</li>
               <li>Implemented unit and component tests for all features I developed</li>
-              <li>Performed code reviews on team member's code, gave and received feedback on open pull requests</li>
+              <li>Performed code reviews on team member's code, gave and received feedback on open pull requests</li>              
             </ul>
             <div className="SE-Environment">
-              Technical Environment: <br></br> JavaScript, NodeJS, ReactJS, ExpressJS
+              Technical Environment: <br></br> JavaScript, NodeJS, ReactJS, ExpressJS, TypeScript
               <ul className="experience-description-list" style={{marginTop: '2px'}}>
                 <li>AWS: S3, DynamoDB, Step, Lambda, EC2, ECS</li>
-                <li>Testing: Mocha, Chai, Sinon, Proxyquire, Nock</li>
+                <li>Testing: Mocha, Chai, Sinon, Proxyquire, Nock, Jest, Testcafe</li>
                 <li>Project Management: BitBucket, Confluence, Jira, Trello</li>                
               </ul>
             </div>            
