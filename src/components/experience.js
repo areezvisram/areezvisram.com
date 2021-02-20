@@ -106,23 +106,28 @@ const Experience = () => {
         <div className="experience-description-container" id="sigDesc">
           <div className="experience-position">Co-op Software Developer - Full Stack Developer</div>
           <div className="experience-position">Signiant</div>
-          <div className="experience-date">January 2021 - April 2021 (Ongoing)</div>
+          <div className="experience-date">January 2021 - August 2021 (Ongoing)</div>
           <div className="experience-description">
             <ul className="experience-description-list">
-              <li>Full stack developer within the R&D department working on Signiant's Jet and Media Shuttle Products</li>
+              <li>Worked as a developer in a full-stack team to define, architect and implement product features</li>
+              <li>Collaboratively developed product features while gaining valuable experience in various technologies and languages</li>
+              <li>Learned how to build and deploy code in a Cloud hosted environment</li>
               <li>Gained experience working in a fast-paced agile story environment in the form of two-week sprints</li>
+              <li>Performed an iteration demo to present the work done over the last sprint to the entire company</li>
               <li>Used NodeJS to implement backend features with a focus on micro-service architecture</li>
-              <li>Developed various frontend features and components using React and Material UI based on strongly UI/UX focused designs</li>
-              <li>Integrated features with cloud services such as AWS's DynamoDB, S3, Lambda and Step Functions</li>
-              <li>Implemented unit and component tests for all features I developed</li>
-              <li>Performed code reviews on team member's code, gave and received feedback on open pull requests</li>              
+              <li>Created Express REST API endpoints to hydrate frontend components with queried data from DynamoDB</li>
+              <li>Developed various frontend features using React and Material UI based on strong UI/UX focused designs</li>
+              <li>Wrote unit and component tests to ensure high code quality with a minimum code coverage of 98%</li>
+              <li>Integrated features with cloud services such as AWS, Azure, Google Cloud Service</li>
+              <li>Wrote clear, concise OpenAPI documentation for users and internal team members</li>
+              <li>Performed code reviews on team member's code, gave and received feedback on open pull requests</li>
             </ul>
             <div className="SE-Environment">
               Technical Environment: <br></br> JavaScript, NodeJS, ReactJS, ExpressJS, TypeScript
               <ul className="experience-description-list" style={{marginTop: '2px'}}>
-                <li>AWS: S3, DynamoDB, Step, Lambda, EC2, ECS</li>
+                <li>AWS: S3, DynamoDB, Step, Lambda, EC2, ECS, Elasticsearch</li>
                 <li>Testing: Mocha, Chai, Sinon, Proxyquire, Nock, Jest, Testcafe</li>
-                <li>Project Management: BitBucket, Confluence, Jira, Trello</li>                
+                <li>Project Management: BitBucket, Confluence, Jira, Trello, SwaggerHub</li>                
               </ul>
             </div>            
           </div>
