@@ -1,16 +1,12 @@
-//import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import NavigationItem from '../../components/NavigationItem';
+import { tabInfo } from '../../constants/routes';
 
-// const useStyles = makeStyles((theme) => ({
-//     title: {
-//         color: theme.palette.secondary.dark
-//     }
-// }));
+//https://codesandbox.io/s/responsivenavbarmaterial-ui-60czl?file=/src/Components/Header.js
 
 const Header = () => {    
     return (
-        <NavigationItem />
+        <NavigationItem tabInfo={tabInfo} />
     )    
 }
 

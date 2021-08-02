@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, makeStyles, Link } from '@material-ui/core';
+import { Tab, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     navBar: {
@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const TabItem = ({ label, route}) => {
+const TabItem = ({ label, route, component }) => {
     const classes = useStyles();
     return (        
-        <Tab key={label} label={label} className={classes.navBar} component={Link} to={route}/>
+        <Tab key={label} label={label} className={classes.navBar} component={component} to={route}/>
     )
 };
 
