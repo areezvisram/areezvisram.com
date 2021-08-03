@@ -1,12 +1,32 @@
 import React from 'react';
+import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
 import NavigationItem from '../../components/NavigationItem';
 import { tabInfo } from '../../constants/routes';
 
-//https://codesandbox.io/s/responsivenavbarmaterial-ui-60czl?file=/src/Components/Header.js
+const useStyles = makeStyles((theme) => ({
+    appBar: {
+        background: 'transparent',
+        boxShadow: 'none',
+        marginTop: theme.spacing(1)
+    },
+}));
 
-const Header = () => {    
+const Header = () => {  
+    const classes = useStyles();  
     return (
-        <NavigationItem tabInfo={tabInfo} />
+        <AppBar className={classes.appBar}>
+            <Toolbar>
+                <Typography
+                    variant="h5"
+                    component="p"
+                    color="textSecondary"
+                    style={{ flexGrow: 1, color: '#fff' }}
+                >
+                    Areez
+                </Typography>
+                <NavigationItem tabInfo={tabInfo} />
+            </Toolbar>
+        </AppBar>
     )    
 }
 
