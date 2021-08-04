@@ -1,29 +1,23 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, makeStyles } from '@material-ui/core';
 import NavigationItem from '../../components/NavigationItem';
 import { tabInfo } from '../../constants/routes';
+import Logo from '../../components/Logo';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
         background: 'transparent',
         boxShadow: 'none',
-        marginTop: theme.spacing(1)
+        height: theme.spacing(15)
     },
 }));
 
 const Header = () => {  
-    const classes = useStyles();  
+    const classes = useStyles();     
     return (
         <AppBar className={classes.appBar}>
             <Toolbar>
-                <Typography
-                    variant="h5"
-                    component="p"
-                    color="textSecondary"
-                    style={{ flexGrow: 1, color: '#fff' }}
-                >
-                    Areez
-                </Typography>
+                <Logo />
                 <NavigationItem tabInfo={tabInfo} />
             </Toolbar>
         </AppBar>
