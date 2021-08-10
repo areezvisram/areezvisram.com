@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 const TabItem = ({ label, route, component }) => {
     const classes = useStyles();
     return (        
-        <Tab key={label} label={label} className={classes.tab} component={component} to={route}/>
+        <Tab key={label} label={label} className={classes.tab} component={component} to={route}/>        
     )
 };
 
