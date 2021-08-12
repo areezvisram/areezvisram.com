@@ -19,7 +19,7 @@ const NavigationItem = ({ tabInfo }) => {
     return (
         <BrowserRouter>
             {isSmallDisplay ? (
-                <HamburgerMenu tabInfo={tabInfo} />
+                <HamburgerMenu tabInfo={tabInfo} tabComponent={Link} />
             ): (
                 <div>
                     <Tabs className={classes.navBar} value={false}>            

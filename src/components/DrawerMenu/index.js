@@ -2,7 +2,6 @@ import React from 'react';
 import { IconButton, Drawer, makeStyles, Box, useTheme } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import TabItem from '../NavigationItem/TabItem';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo }) => {
+const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo, tabComponent }) => {
     const classes = useStyles();
     const theme = useTheme();
     return (
@@ -37,7 +36,7 @@ const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo }) => {
                 </IconButton>                
             </Box>
             <Box textAlign={'center'} marginTop={theme.spacing(0.5)}>
-                {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={Link} key={tab.value} />)}
+                {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={tabComponent} key={tab.value} />)}
             </Box>
         </Drawer> 
     )

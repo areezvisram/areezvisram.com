@@ -12,11 +12,11 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const HamburgerMenu = ({ tabInfo }) => {
+const HamburgerMenu = ({ tabInfo, tabComponent }) => {
     const classes = useStyles();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-    const handleDrawerOpen = () => {             
+    const handleDrawerOpen = () => {    
         setIsDrawerOpen(!isDrawerOpen)
     }
     return (
@@ -25,7 +25,7 @@ const HamburgerMenu = ({ tabInfo }) => {
                 <MenuIcon className={classes.menuIcon} />
             </IconButton>
                         
-           <DrawerMenu isDrawerOpen={isDrawerOpen} handleDrawerOpen={handleDrawerOpen} tabInfo={tabInfo} />
+           <DrawerMenu isDrawerOpen={isDrawerOpen} handleDrawerOpen={handleDrawerOpen} tabInfo={tabInfo} tabComponent={tabComponent} />
         </div>
     )
 }

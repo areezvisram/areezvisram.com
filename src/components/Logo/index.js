@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './areez.png'
+import logo from './areez.png';
 import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
