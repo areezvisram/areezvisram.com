@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconButton, makeStyles } from '@material-ui/core';
+import { IconButton, makeStyles, Box } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import DrawerMenu from '../DrawerMenu';
 
@@ -18,15 +18,15 @@ const HamburgerMenu = ({ tabInfo, tabComponent }) => {
 
     const handleDrawerOpen = () => {    
         setIsDrawerOpen(!isDrawerOpen)
-    }
+    };
     return (
-        <div>
+        <Box>
             <IconButton className={classes.iconButton} size={'small'} onClick={handleDrawerOpen}>
                 <MenuIcon className={classes.menuIcon} />
             </IconButton>
                         
            <DrawerMenu isDrawerOpen={isDrawerOpen} handleDrawerOpen={handleDrawerOpen} tabInfo={tabInfo} tabComponent={tabComponent} />
-        </div>
+        </Box>
     )
 }
 
