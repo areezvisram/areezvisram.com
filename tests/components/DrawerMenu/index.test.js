@@ -11,14 +11,16 @@ describe('<DrawerMenu />', () => {
         props = {
             isDrawerOpen: true,
             handleDrawerOpen: jest.fn(),
-            tabInfo: [{
-                label: 'TEST',
-                route: '/test',
-                value: 1
-            }],
-            tabComponent: Typography
-        }
-    })
+            tabInfo: [
+                {
+                    label: 'TEST',
+                    route: '/test',
+                    value: 1,
+                },
+            ],
+            tabComponent: Typography,
+        };
+    });
     it('should render as expected', () => {
         const drawerMenu = shallow(<DrawerMenu {...props} />);
         expect(drawerMenu).toMatchSnapshot();
@@ -42,10 +44,10 @@ describe('<DrawerMenu />', () => {
 
     describe('rendering inside Drawer when open', () => {
         it('should render 2 Boxes when the Drawer is open', () => {
-            const drawerMenu = mount(<DrawerMenu {...props} />);        
+            const drawerMenu = mount(<DrawerMenu {...props} />);
             expect(drawerMenu.find(Box).exists()).toBeTruthy();
             expect(drawerMenu.find(Box)).toHaveLength(2);
-        })
+        });
 
         describe('first box', () => {
             it('should render an IconButton in the first box', () => {
@@ -64,8 +66,8 @@ describe('<DrawerMenu />', () => {
                 const drawerMenu = mount(<DrawerMenu {...props} />);
                 const closeIcon = drawerMenu.find(Box).at(0).find(IconButton).find(CloseIcon);
                 expect(closeIcon.exists()).toBeTruthy();
-            })
-        })
+            });
+        });
 
         describe('second box', () => {
             beforeEach(() => {
@@ -73,16 +75,16 @@ describe('<DrawerMenu />', () => {
                     {
                         label: 'TEST',
                         route: '/test',
-                        value: 1
+                        value: 1,
                     },
                     {
                         label: 'TEST2',
                         route: '/test2',
-                        value: 2
-                    }
-                ]
-            })
-            it('should render as many TabItem components as there is routes in the tabInfo prop', () => {         
+                        value: 2,
+                    },
+                ];
+            });
+            it('should render as many TabItem components as there is routes in the tabInfo prop', () => {
                 const drawerMenu = mount(<DrawerMenu {...props} />);
                 const tabItems = drawerMenu.find(Box).at(1).find(TabItem);
                 expect(tabItems).toHaveLength(props.tabInfo.length);
@@ -90,23 +92,23 @@ describe('<DrawerMenu />', () => {
 
             it('should render each tab with the props from the tabInfo array', () => {
                 const drawerMenu = mount(<DrawerMenu {...props} />);
-                const tabItems = drawerMenu.find(Box).at(1).find(TabItem);                
-                for(var i = 0; i < tabItems.length; i++) {
-                    const tab = tabItems.at(i);                    
+                const tabItems = drawerMenu.find(Box).at(1).find(TabItem);
+                for (var i = 0; i < tabItems.length; i++) {
+                    const tab = tabItems.at(i);
                     expect(tab.prop('label')).toEqual(props.tabInfo[i].label);
-                    expect(tab.prop('route')).toEqual(props.tabInfo[i].route);                
+                    expect(tab.prop('route')).toEqual(props.tabInfo[i].route);
                     expect(tab.key()).toBe(props.tabInfo[i].value.toString());
-                };
+                }
             });
 
             it('should render the component of the tab as the passed prop', () => {
                 const drawerMenu = mount(<DrawerMenu {...props} />);
                 const tabItems = drawerMenu.find(Box).at(1).find(TabItem);
-                for(var i = 0; i < tabItems.length; i++) {
-                    const tab = tabItems.at(i);                    
-                    expect(tab.prop('component')).toEqual(props.tabComponent);       
-                };
-            })
-        })
-    })
-})
+                for (var i = 0; i < tabItems.length; i++) {
+                    const tab = tabItems.at(i);
+                    expect(tab.prop('component')).toEqual(props.tabComponent);
+                }
+            });
+        });
+    });
+});
