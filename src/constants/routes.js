@@ -1,31 +1,31 @@
 const tabInfo = [
     {
-      label: 'ABOUT',
-      value: 0,
-      route: '/about'
+        label: 'ABOUT',
+        value: 0,
+        route: '/about',
     },
     {
-      label: 'EXPERIENCE',
-      value: 1,
-      route: '/experience'
+        label: 'EXPERIENCE',
+        value: 1,
+        route: '/experience',
     },
     {
-      label: 'PROJECTS',
-      value: 2,
-      route: '/projects'
+        label: 'PROJECTS',
+        value: 2,
+        route: '/projects',
     },
     {
         label: 'CONTACT',
         value: 3,
-        route: '/contact'
-      },
-      {
+        route: '/contact',
+    },
+    {
         label: 'RESUME',
         value: 4,
-        route: '/resume'
-      },
+        route: '/resume',
+    },
 ];
 
 module.exports = {
-    tabInfo
-}
+    tabInfo,
+};
