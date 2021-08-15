@@ -1,6 +1,6 @@
-import { createTheme } from '@material-ui/core';
+import { createTheme, responsiveFontSizes } from '@material-ui/core';
 
-const theme = createTheme({
+let theme = createTheme({
     palette: {
         background: {
             default: '#101357',
@@ -18,6 +18,11 @@ const theme = createTheme({
             contrastText: '#000',
         },
     },
+    typography: {
+        fontFamily: ['Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'].join(','),
+    },
 });
 
-export default theme;
+theme = responsiveFontSizes(theme);
+
+export { theme };
