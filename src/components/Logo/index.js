@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(25)
     },
     container: {
-        flexGrow: 1
+        flexGrow: 1,        
     }
 }));
 

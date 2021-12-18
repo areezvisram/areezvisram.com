@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     appBar: {
         background: 'transparent',
         boxShadow: 'none',
-        height: theme.spacing(15),
+        height: theme.spacing(15),        
     },
 }));
 

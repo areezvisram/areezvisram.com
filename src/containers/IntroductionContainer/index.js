@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, makeStyles } from '@material-ui/core';
+import { Box, makeStyles, Card, Grid } from '@material-ui/core';
 import IntroductionTitle from '../../components/IntroductionTitle';
 
 const useStyles = makeStyles((theme) => ({
@@ -19,15 +19,22 @@ const useStyles = makeStyles((theme) => ({
             width: theme.spacing(55),
         },
         //backgroundColor: 'red',
+        zIndex: 90
     },
+
+    card: {
+        backgroundColor: '#101357',
+    }
 }));
 
 const IntroductionContainer = () => {
     const classes = useStyles();
-    return (
-        <Box className={classes.introduction} mx="auto">
-            <IntroductionTitle />
-        </Box>
+    return (                    
+        <Box className={classes.introduction} mx="auto">            
+            <Card className={classes.card} raised={false}>
+                <IntroductionTitle />
+            </Card>
+        </Box>            
     );
 };
 

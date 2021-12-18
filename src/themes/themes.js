@@ -19,7 +19,7 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: ['Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'].join(','),
+        fontFamily: ['Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'].join(','),        
     },
 });
 
