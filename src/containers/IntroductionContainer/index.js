@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, makeStyles, Card, Grid } from '@material-ui/core';
+import { Box, makeStyles, Card } from '@material-ui/core';
 import IntroductionTitle from '../../components/IntroductionTitle';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,15 +15,14 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: theme.spacing(80),
         },
-        [theme.breakpoints.down('sm')]: {
-            width: theme.spacing(55),
-        },
-        //backgroundColor: 'red',
+        [theme.breakpoints.down('xs')]: {
+            width: theme.spacing(40),
+        },        
         zIndex: 90
     },
 
     card: {
-        backgroundColor: '#101357',
+        backgroundColor: theme.palette.primary.main,
     }
 }));
 

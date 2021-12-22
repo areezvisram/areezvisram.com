@@ -4,6 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { theme } from '../../themes/themes';
 import Header from '../Header';
 import IntroductionContainer from '../IntroductionContainer';
+import AboutContainer from '../AboutContainer';
 import ParticleEffect from '../../components/ParticleEffect';
 
 const BaseContainer = () => {
@@ -14,6 +15,7 @@ const BaseContainer = () => {
             <Box display="flex" flexDirection="column" height="300vh">
                 <Header />
                 <IntroductionContainer />
+                <AboutContainer />
                 <ParticleEffect /> 
                 <CssBaseline />
             </Box>
