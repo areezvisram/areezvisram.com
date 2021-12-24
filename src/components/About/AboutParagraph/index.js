@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Box, makeStyles } from "@material-ui/core";
+import AboutListContainer from "../../../containers/AboutListContainer";
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -118,8 +119,9 @@ const AboutParagraph = () => {
                 .                
             </Typography>
             <Typography className={classes.white} variant="h5" align="left">                
-                Check out some of my proficient programming languages and skills:
+                Check out some of my proficient programming languages and skills: {''}
             </Typography>
+            <AboutListContainer />
         </Box>
     )
 }
