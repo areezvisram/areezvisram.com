@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const AboutDialog = ({ handleModalClose, open, title }) => {
+const AboutDialog = ({ handleModalClose, open, title, listItems }) => {
     const classes = useStyles();
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('xs'));
@@ -24,7 +24,7 @@ const AboutDialog = ({ handleModalClose, open, title }) => {
                 </Box>
             </DialogTitle>
             <DialogContent>                    
-                <AboutDialogList listItems={['JavaScript', 'Python']} />
+                <AboutDialogList listItems={listItems} />
             </DialogContent>
         </Dialog>        
     );

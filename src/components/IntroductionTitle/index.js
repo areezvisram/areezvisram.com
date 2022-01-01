@@ -32,8 +32,32 @@ const IntroductionTitle = () => {
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     Software Engineering {''}
                 </Typography>
-                student at McMaster University. {''} 
-                I'm passionate about software engineering, software development, machine learning, innovation, and entrepreneurship. 
+                student at {''}
+                <Typography variant="h5" display="inline" className={classes.blue}>
+                    McMaster University. {''}
+                </Typography>                
+                I'm passionate about {''}
+                <Typography variant="h5" display="inline" className={classes.blue}>
+                    software engineering{''}
+                </Typography> 
+                , {''}
+                <Typography variant="h5" display="inline" className={classes.blue}>
+                    software development{''}
+                </Typography> 
+                , {''}
+                <Typography variant="h5" display="inline" className={classes.blue}>
+                    machine learning{''}
+                </Typography> 
+                , {''}
+                <Typography variant="h5" display="inline" className={classes.blue}>
+                    innovation{''}
+                </Typography> 
+                , {''}
+                and {''}
+                <Typography variant="h5" display="inline" className={classes.blue}>
+                    entrepreneurship{''}
+                </Typography>
+                .
             </Typography>
         </Box>
     );

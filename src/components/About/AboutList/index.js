@@ -42,7 +42,7 @@ const AboutList = ({ title, listItems }) => {
                     })
                 }
             </List>
-            <AboutExpandButton title={title} />
+            <AboutExpandButton title={title} listItems={listItems} />
         </Box>  
     );
 };

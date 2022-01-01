@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const AboutExpandButton = ({ title }) => {
+const AboutExpandButton = ({ title, listItems }) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);      
 
@@ -40,7 +40,7 @@ const AboutExpandButton = ({ title }) => {
                 Click to Expand                    
                 <ExpandMore className={classes.expandMore}/>
             </Button>
-            <AboutDialog handleModalClose={handleModalClose} open={open} title={title}/>
+            <AboutDialog handleModalClose={handleModalClose} open={open} title={title} listItems={listItems}/>
         </Box>        
     );
 };
