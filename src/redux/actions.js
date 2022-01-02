@@ -1,17 +1,3 @@
-const authenticate = async () => {
-    const response = await fetch("http://localhost:5000/jwt-login", {
-        method: 'POST',        
-        headers : {
-            'Content-Type' : 'application/json'
-        },
-        body: JSON.stringify({
-            clientSecret: "YtdUuIlaY0vozIBsbUVtXKMZnyjzMQkGNTbCgvpgLQzXoEjo9Y",
-            clientId: "areezvisram.com"
-        })
-    });
-    return response.json();    
-}
-
 export const FETCH_TOKEN_BEGIN = "FETCH_TOKEN_BEGIN";
 export const FETCH_TOKEN_SUCCESS = "FETCH_TOKEN_SUCCESS";
 export const FETCH_TOKEN_FAILURE = "FETCH_TOKEN_FAILURE";

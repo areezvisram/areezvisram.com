@@ -5,6 +5,7 @@ import { theme } from '../../themes/themes';
 import Header from '../Header';
 import IntroductionContainer from '../IntroductionContainer';
 import AboutContainer from '../AboutContainer';
+import ExperienceContainer from '../ExperienceContainer';
 import ParticleEffect from '../../components/ParticleEffect';
 
 const BaseContainer = () => {
@@ -16,6 +17,7 @@ const BaseContainer = () => {
                 <Header />
                 <IntroductionContainer />
                 <AboutContainer />
+                <ExperienceContainer />
                 <ParticleEffect /> 
                 <CssBaseline />
             </Box>
