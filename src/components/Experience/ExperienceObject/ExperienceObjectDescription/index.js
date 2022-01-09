@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const ExperienceObjectDescription = ({ listItems }) => {
+const ExperienceObjectDescription = ({ listItems = [] }) => {
     const classes = useStyles();
     return (          
         // <Box display='flex' flexDirection='column' flex={1} alignItems='center' mx='auto' marginTop='2em'>            

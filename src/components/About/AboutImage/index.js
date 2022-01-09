@@ -4,13 +4,15 @@ import { Card, CardMedia, makeStyles, Box } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     image: {
         marginLeft: theme.spacing(10),
+        marginTop: theme.spacing(-5),
         [theme.breakpoints.down('sm')]: {
-            marginLeft: theme.spacing(8)
+            marginLeft: theme.spacing(8),
+            marginTop: theme.spacing(5)
         },  
         [theme.breakpoints.down('xs')]: {
-            marginLeft: theme.spacing(2)
-        },  
-        marginTop: theme.spacing(-5),
+            marginLeft: theme.spacing(2),
+            marginTop: theme.spacing(0)
+        },          
         zIndex: 89
     }
 }));

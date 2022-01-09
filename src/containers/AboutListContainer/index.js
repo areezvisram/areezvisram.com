@@ -9,7 +9,7 @@ const AboutListContainer = () => {
 
     const [languages, setLanguages] = useState([]);    
     const [skills, setSkills] = useState([]);
-    const [error, setError] = useState(true);
+    const [error, setError] = useState(null);
 
     // useEffect(() => {              
     //     if(!state.loading) {

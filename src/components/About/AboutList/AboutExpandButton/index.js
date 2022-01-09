@@ -7,7 +7,10 @@ const useStyles = makeStyles((theme) => ({
     button: {
         color: theme.palette.primary.contrastText, 
         fontSize: theme.spacing(2.5),
-        justifyContent: 'center'      
+        justifyContent: 'center',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: theme.spacing(2),
+        },  
     },
 
     root: {
