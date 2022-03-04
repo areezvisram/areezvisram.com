@@ -6,19 +6,23 @@ const useStyles = makeStyles((theme) => ({
     white: {
         color: theme.palette.primary.contrastText,
     },
+
+    blue: {
+        color: theme.palette.secondary.main,
+    },
 }));
 
-const ExperienceTitle = () => {
+const ProjectTitle = () => {
     const classes = useStyles();
     return (
         <Box>
             <DividerWithText>
                 <Typography className={classes.white} variant="h3" align="left">
-                    Work Experience
+                    My Projects
                 </Typography>
             </DividerWithText>            
         </Box>
     );
 };
 
-export default ExperienceTitle;
+export default ProjectTitle;

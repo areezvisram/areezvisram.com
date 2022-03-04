@@ -34,33 +34,33 @@ const ExperienceVerticalTabs = () => {
     };
 
     const [experience, setExperience] = useState([]);        
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(null);
 
     const state = useSelector((state) => state.tokenReducer);
     const token = state.items;
 
-    useEffect(() => {          
-        if(!state.loading) {                                
-            fetch("http://localhost:5000/experience/getExperience", {
-                method: 'GET',
-                headers: {
-                    'Access-Token': token
-                }
-            })
-            .then((response) => {
-                if(response.ok) {
-                    return response.json();
-                }   
-                throw response;         
-            })
-            .then((data) => {                     
-                setExperience(data.experience);
-            })
-            .catch((error) => {
-                setError(error);
-            });  
-        }
-    }, [state.loading]);       
+    // useEffect(() => {          
+    //     if(!state.loading) {                                
+    //         fetch("http://localhost:5000/experience/getExperience", {
+    //             method: 'GET',
+    //             headers: {
+    //                 'Access-Token': token
+    //             }
+    //         })
+    //         .then((response) => {
+    //             if(response.ok) {
+    //                 return response.json();
+    //             }   
+    //             throw response;         
+    //         })
+    //         .then((data) => {                     
+    //             setExperience(data.experience);
+    //         })
+    //         .catch((error) => {
+    //             setError(error);
+    //         });  
+    //     }
+    // }, [state.loading]);       
     
     return (                         
         <Box className={!fullScreen ? classes.box : null}>
