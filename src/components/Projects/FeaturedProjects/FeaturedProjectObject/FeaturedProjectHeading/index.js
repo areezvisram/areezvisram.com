@@ -15,8 +15,7 @@ const FeaturedProjectHeading = ({ isSmallScreen }) => {
     const classes = useStyles();    
     return (
         <Box>            
-            {/* <Typography className={classes.blue} variant="h5" align="right"> */}
-            <Typography className={classes.blue} variant="h5" align={isSmallScreen ? "left": "right"}>
+            <Typography className={classes.blue} variant="h5" align={isSmallScreen ? "center": "right"}>
                 Featured Project
             </Typography>                   
         </Box>

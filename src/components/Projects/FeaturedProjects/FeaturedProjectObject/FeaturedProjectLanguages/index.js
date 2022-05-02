@@ -22,7 +22,7 @@ const FeaturedProjectLanguages = ({ isSmallScreen }) => {
     const languages = ['C++', 'Make', 'GLUT', 'OpenGL', 'JavaScript'];
     
     return (
-        <Box gridColumnGap={isSmallScreen ? '15px' : 0} flexWrap='wrap' display='flex' gridAutoFlow='column' flexDirection={isSmallScreen ? 'row' : 'column'} marginLeft={isSmallScreen ? '0' : '0'} justifyContent={isSmallScreen ? 'left': 'right'} marginTop='25px'  >  
+        <Box gridColumnGap={isSmallScreen ? '15px' : 0} flexWrap='wrap' display='flex' gridAutoFlow='column' flexDirection={isSmallScreen ? 'row' : 'column'} marginLeft={isSmallScreen ? '0' : '0'} justifyContent={isSmallScreen ? 'center': 'right'} marginTop='25px'  >  
             {
                 languages.map((language) => {
                     return (

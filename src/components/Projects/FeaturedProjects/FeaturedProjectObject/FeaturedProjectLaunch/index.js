@@ -13,9 +13,8 @@ const useStyles = makeStyles((theme) => ({
 
     overallBoxSmallScreen: {
         display: 'flex',
-        justifyContent: 'left',
-        flexWrap: 'wrap',
-        flexDirection: 'column'
+        justifyContent: 'center',   
+        flexDirection: 'column'     
     },
 
     innerBox: {
@@ -23,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'right',
         flexBasis: '20%',
         marginRight: theme.spacing(3)
+    },
+
+    innerBoxSmalLScreen: {
+        display: 'flex',
+        justifyContent: 'center'
     }
 }));
 
@@ -32,7 +36,7 @@ const FeaturedProjectLaunch = ({ isSmallScreen }) => {
     return (   
         <Box className={isSmallScreen ? classes.overallBoxSmallScreen : classes.overallBox}>
             <FeaturedProjectLanguages isSmallScreen={isSmallScreen} />
-            <Box className={isSmallScreen ? null : classes.innerBox}>
+            <Box className={isSmallScreen ? classes.innerBoxSmalLScreen : classes.innerBox}>
                 <Icon iconType='github' isSmallScreen={isSmallScreen}/>
                 <Icon iconType='launch' isSmallScreen={isSmallScreen}/>
             </Box>                

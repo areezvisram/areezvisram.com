@@ -14,9 +14,8 @@ const useStyles = makeStyles((theme) => ({
 const FeaturedProjectTitle = ({ isSmallScreen }) => {
     const classes = useStyles();    
     return (
-        <Box>            
-            {/* <Typography className={classes.white} variant="h4" align="right"> */}
-            <Typography className={classes.white} variant="h4" align={isSmallScreen ? "left": "right"}>
+        <Box>                        
+            <Typography className={classes.white} variant="h4" align={isSmallScreen ? "center": "right"}>
                 3D CAD System
             </Typography>                   
         </Box>

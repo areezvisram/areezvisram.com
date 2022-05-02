@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
 
     minimalHorizontalPadding: {
         paddingLeft: theme.spacing(1.5),
-        paddingRight: theme.spacing(0)
+        paddingRight: theme.spacing(0),
+        paddingBottom: 0
     }
 }));
 

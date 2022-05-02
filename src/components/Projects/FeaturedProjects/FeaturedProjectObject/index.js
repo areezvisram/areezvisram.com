@@ -1,10 +1,8 @@
 import React from 'react';
-import { Box, IconButton } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import FeaturedProjectHeading from './FeaturedProjectHeading';
 import FeaturedProjectTitle from './FeaturedProjectTitle';
 import FeaturedProjectDescriptionCard from './FeaturedProjectDescriptionCard';
-import FeaturedProjectLanguages from './FeaturedProjectLanguages';
-import { GitHub, Launch } from '@material-ui/icons';
 import FeaturedProjectLaunch from './FeaturedProjectLaunch';
 
 

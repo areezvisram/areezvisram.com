@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Card, makeStyles, Typography, Paper } from '@material-ui/core';
+import Icon from '../../Icon';
 
 const useStyles = makeStyles((theme) => ({    
     text: {
@@ -8,16 +9,8 @@ const useStyles = makeStyles((theme) => ({
 
     card: {
         backgroundColor: '#121212',
-        // width: '80%',
-        // marginBottom: '20px',
         padding: theme.spacing(2),
         textAlign: 'center',
-        [theme.breakpoints.down('md')]: {
-            width: '90%',
-        },
-        [theme.breakpoints.down('sm')]: {
-            width: '95%',
-        },
     }
 }));
 const NonFeaturedProjectObject = () => {       
@@ -28,6 +21,8 @@ const NonFeaturedProjectObject = () => {
                 <Typography variant='h4' className={classes.text}>Title of Project</Typography>
                 <Typography variant='h6' className={classes.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium augue sit amet iaculis porta. Suspendisse tristique ipsum ex, et pulvinar arcu ultricies at.</Typography>
                 <Typography variant='h6' className={classes.text}>C++ OpenGL JavaScript</Typography>
+                <Icon iconType='github'/>
+                <Icon iconType='launch'/>
             </Card>        
         </Paper>
     );
