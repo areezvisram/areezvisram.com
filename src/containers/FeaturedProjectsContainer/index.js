@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, useMediaQuery, useTheme, Card, CardActionArea, CardContent, Typography, CardMedia, makeStyles  } from '@material-ui/core';
 import FeaturedProjectImage from '../../components/Projects/FeaturedProjects/FeaturedProjectImage';
 import FeaturedProjectObject from '../../components/Projects/FeaturedProjects/FeaturedProjectObject';
-import { alpha } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     container: {
@@ -26,11 +25,13 @@ const useStyles = makeStyles({
     },
 
     image: {
-      backgroundColor: '#000000'
+      backgroundColor: '#000000',
+      height: '30em'
     },
 
     media: {
       width: '100%',
+      height: '100%',
       opacity: 0.35
     },
 

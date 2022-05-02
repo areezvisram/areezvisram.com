@@ -6,9 +6,10 @@ import Logo from '../../components/Logo';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
-        background: 'transparent',
+        background: theme.palette.primary,
         boxShadow: 'none',
-        height: theme.spacing(15),        
+        // height: theme.spacing(15),     
+        width: '100%'
     },
 }));
 
@@ -16,7 +17,7 @@ const Header = () => {
     const classes = useStyles();
     return (
         <Box>
-            <AppBar className={classes.appBar}>
+            <AppBar className={classes.appBar} position='fixed'>
                 <Toolbar>
                     <Logo />
                     <NavigationItem tabInfo={tabInfo} />

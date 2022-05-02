@@ -11,18 +11,16 @@ const useStyles = makeStyles((theme) => ({
         },  
         [theme.breakpoints.down('xs')]: {
         },          
-        zIndex: 2
+        zIndex: 2,        
     },
 
     media: {
-        // height: '80%',
         width: '100%',
     },
 
     card: {
         width: '60%',
         marginLeft: 0,
-        backgroundColor: 'red'
     }
 }));
 
@@ -32,8 +30,7 @@ const FeaturedProjectImage = () => {
         <Box className={classes.image} mx='auto'>
             <Card className={classes.card}>
                 <CardMedia 
-                    component='img'
-                    // height='350'        
+                    component='img'                    
                     image={require('../../../../images/website.png').default}
                     alt='me'    
                     className={classes.media}                        

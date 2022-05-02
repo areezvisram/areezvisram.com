@@ -4,8 +4,8 @@ import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     logo: {
-        height: theme.spacing(25),
-        width: theme.spacing(25)
+        // height: theme.spacing(25),
+        // width: theme.spacing(25)
     },
     container: {
         flexGrow: 1,        

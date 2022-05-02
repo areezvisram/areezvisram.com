@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
             width: theme.spacing(100),
         },
         [theme.breakpoints.down('sm')]: {
-            width: theme.spacing(80),
+            width: theme.spacing(70),
         },
         [theme.breakpoints.down('xs')]: {
-            width: theme.spacing(40),
+            width: theme.spacing(70 ),
         },        
         zIndex: 90
     },

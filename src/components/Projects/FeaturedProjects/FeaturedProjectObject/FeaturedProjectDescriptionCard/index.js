@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
 
     cardNoBackground: {
         background: 'transparent',
-        width: '700px',
         alignSelf: 'left',
         zIndex: 3
     }
