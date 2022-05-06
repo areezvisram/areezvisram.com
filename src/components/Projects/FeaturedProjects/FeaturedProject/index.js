@@ -3,11 +3,11 @@ import React from "react";
 import FeaturedProjectFullScreen from "./FeaturedProjectFullScreen";
 import FeaturedProjectSmallScreen from "./FeaturedProjectSmallScreen";
 
-const FeaturedProject = ({ fullScreen }) => {    
+const FeaturedProject = ({ fullScreen, orientation }) => {      
     return (
-      <Box>
+      <Box paddingBottom={5}>
         {
-          fullScreen ? <FeaturedProjectFullScreen /> : <FeaturedProjectSmallScreen />
+          fullScreen ? <FeaturedProjectSmallScreen orientation={orientation} /> : <FeaturedProjectFullScreen orientation={orientation} />
         }
       </Box>        
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, makeStyles, Card } from '@material-ui/core';
+import { Box, makeStyles, Card, Grid } from '@material-ui/core';
 import ProjectTitle from '../../components/Projects/ProjectTitle';
 import FeaturedProjectsContainer from '../FeaturedProjectsContainer';
 import NonFeaturedProjectsContainer from '../NonFeaturedProjectsContainer';
@@ -11,7 +11,13 @@ const useStyles = makeStyles((theme) => ({
             width: theme.spacing(150),
         },
         [theme.breakpoints.down('md')]: {
-            width: '80%',
+            width: theme.spacing(115),
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: theme.spacing(74),
+        },  
+        [theme.breakpoints.down('xs')]: {
+            width: theme.spacing(55),            
         },          
         zIndex: 88
     },
@@ -28,13 +34,6 @@ const useStyles = makeStyles((theme) => ({
             width: '80%',
         },
         zIndex: 88
-        // [theme.breakpoints.down('1300')]: {
-        //     width: '90%',
-        // },
-
-        // [theme.breakpoints.down('1050')]: {
-        //     width: '100%',
-        // },
     }
 }));
 
@@ -42,12 +41,12 @@ const ProjectsContainer = () => {
     const classes = useStyles();
     return (  
         <Box display='flex' flexDirection='column'>
-            <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction} paddingBottom='50px'>
-                <Box className={classes.introduction} mx="auto">            
+            <Box flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction} paddingBottom="50px">
+                <Box className={classes.introduction} mx="auto">                            
                     <Card className={classes.card} raised={false}>
                         <ProjectTitle />  
                         <FeaturedProjectsContainer />                                  
-                    </Card>            
+                    </Card>                            
                 </Box>                                    
             </Box>
             <Box mx="auto" className={classes.nonFeaturedBox}>                                            

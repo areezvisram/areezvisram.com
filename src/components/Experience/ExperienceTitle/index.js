@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 const ExperienceTitle = () => {
     const classes = useStyles();
     return (
-        <Box>
+        <Box mx={2}>
             <DividerWithText>
                 <Typography className={classes.white} variant="h3" align="left">
                     Work Experience

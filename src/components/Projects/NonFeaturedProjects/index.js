@@ -19,7 +19,7 @@ const NonFeaturedProjectObject = () => {
         <Paper display='flex' justifyContent='center' alignItems='center' elevation='3'>
             <Card className={classes.card} raised={true}>
                 <Typography variant='h4' className={classes.text}>Title of Project</Typography>
-                <Typography variant='h6' className={classes.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium augue sit amet iaculis porta. Suspendisse tristique ipsum ex, et pulvinar arcu ultricies at.</Typography>
+                <Typography variant='h6' className={classes.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium augue sit amet iaculis porta. Suspendisse tristique ipsum ex, et pulvinar arcu ultricies at.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium augue sit amet iaculis porta. Suspendisse tristique ipsum ex, et pulvinar arcu ultricies at.</Typography>
                 <Typography variant='h6' className={classes.text}>C++ OpenGL JavaScript</Typography>
                 <Icon iconType='github'/>
                 <Icon iconType='launch'/>

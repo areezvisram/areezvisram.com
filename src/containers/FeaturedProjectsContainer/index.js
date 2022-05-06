@@ -6,8 +6,9 @@ const FeaturedProjectsContainer = () => {
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down(956));  
     return (                 
-        <Box display='flex' height={fullScreen ? 'max-content' : '500px'} >  
-          <FeaturedProject fullScreen={fullScreen} />
+        <Box display='flex' flexDirection="column">          
+          <FeaturedProject fullScreen={fullScreen} orientation="right" />  
+          <FeaturedProject fullScreen={fullScreen} orientation="left" />          
         </Box>        
     );
 };

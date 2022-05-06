@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const ProjectTitle = () => {
     const classes = useStyles();
     return (
-        <Box>
+        <Box mx={2}>
             <DividerWithText>
                 <Typography className={classes.white} variant="h3" align="left">
                     My Projects

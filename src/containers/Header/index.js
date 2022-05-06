@@ -7,8 +7,7 @@ import Logo from '../../components/Logo';
 const useStyles = makeStyles((theme) => ({
     appBar: {
         background: theme.palette.primary,
-        boxShadow: 'none',
-        // height: theme.spacing(15),     
+        boxShadow: 'none', 
         width: '100%'
     },
 }));

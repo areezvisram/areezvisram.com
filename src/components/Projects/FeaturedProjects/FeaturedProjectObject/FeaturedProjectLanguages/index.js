@@ -2,9 +2,16 @@ import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-    white: {
+    left: {
         color: theme.palette.primary.contrastText,
-        marginLeft: '75%',
+        [theme.breakpoints.down('md')]: {
+            marginLeft: '40%'
+        },        
+        zIndex: 4
+    },
+
+    right: {
+        color: theme.palette.primary.contrastText,   
         zIndex: 4
     },
 
@@ -17,16 +24,16 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const FeaturedProjectLanguages = ({ isSmallScreen }) => {
+const FeaturedProjectLanguages = ({ isSmallScreen, orientation }) => {
     const classes = useStyles();
     const languages = ['C++', 'Make', 'GLUT', 'OpenGL', 'JavaScript'];
     
     return (
-        <Box gridColumnGap={isSmallScreen ? '15px' : 0} flexWrap='wrap' display='flex' gridAutoFlow='column' flexDirection={isSmallScreen ? 'row' : 'column'} marginLeft={isSmallScreen ? '0' : '0'} justifyContent={isSmallScreen ? 'center': 'right'} marginTop='25px'  >  
+        <Box gridColumnGap={isSmallScreen ? '15px' : 0} flexWrap='wrap' display='flex' gridAutoFlow='column' flexDirection={isSmallScreen ? 'row' : 'column'} justifyContent={isSmallScreen ? 'center': 'left'} marginTop='25px'  >  
             {
                 languages.map((language) => {
                     return (
-                        <Typography className={isSmallScreen ? classes.marginLeft : classes.white} variant="h5" align="left">
+                        <Typography className={isSmallScreen ? classes.marginLeft : orientation == "right" ? classes.left : classes.right } variant="h5" align={orientation == "left" ? "right" : "left"}>
                             {language}
                         </Typography>  
                     )
