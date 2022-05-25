@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   }
 });
 
-const FeaturedProjectSmallScreen = ({ orientation }) => {
+const FeaturedProjectSmallScreen = ({ orientation, projectObject }) => {
     const classes = useStyles();
     return (    
         <Box my={2} mx={4}>
@@ -40,7 +40,7 @@ const FeaturedProjectSmallScreen = ({ orientation }) => {
               title="Contemplative Reptile"
             />
             <CardContent className={classes.fiCardContent}>
-              <FeaturedProjectObject isSmallScreen={true} orientation={orientation} />
+              <FeaturedProjectObject isSmallScreen={true} orientation={orientation} projectObject={projectObject} />
             </CardContent>          
           </Card>
         </Box>       

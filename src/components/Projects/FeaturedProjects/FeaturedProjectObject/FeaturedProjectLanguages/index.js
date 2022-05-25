@@ -24,16 +24,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const FeaturedProjectLanguages = ({ isSmallScreen, orientation }) => {
-    const classes = useStyles();
-    const languages = ['C++', 'Make', 'GLUT', 'OpenGL', 'JavaScript'];
-    
+const FeaturedProjectLanguages = ({ isSmallScreen, orientation, languages }) => {
+    const classes = useStyles(); 
+
     return (
-        <Box gridColumnGap={isSmallScreen ? '15px' : 0} flexWrap='wrap' display='flex' gridAutoFlow='column' flexDirection={isSmallScreen ? 'row' : 'column'} justifyContent={isSmallScreen ? 'center': 'left'} marginTop='25px'  >  
+        <Box gridColumnGap='10px' flexWrap='wrap' display='flex' gridAutoFlow='column' flexDirection='row' justifyContent={isSmallScreen ? 'center': orientation == "left" ? "left" : "right"} marginTop='25px' marginRight='24px' marginLeft='24px' >  
             {
                 languages.map((language) => {
                     return (
-                        <Typography className={isSmallScreen ? classes.marginLeft : orientation == "right" ? classes.left : classes.right } variant="h5" align={orientation == "left" ? "right" : "left"}>
+                        <Typography className={isSmallScreen ? classes.marginLeft : orientation == "right" ? classes.right : classes.right } variant="h5" align={orientation == "left" ? "right" : "left"}>
                             {language}
                         </Typography>  
                     )

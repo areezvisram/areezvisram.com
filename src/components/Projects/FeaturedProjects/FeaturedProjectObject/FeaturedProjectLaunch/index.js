@@ -8,13 +8,13 @@ const useStyles = makeStyles((theme) => ({
     overallBoxRight: {
         display: 'flex',
         justifyContent: 'right',
-        flexWrap: 'wrap'
+        flexDirection: 'column'
     },
 
     overallBoxLeft: {
         display: 'flex',
         justifyContent: 'left',
-        flexWrap: 'wrap'
+        flexDirection: 'column'
     },
 
     overallBoxSmallScreen: {
@@ -46,26 +46,25 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const FeaturedProjectLaunch = ({ isSmallScreen, orientation }) => {
-    const classes = useStyles();
-    
+const FeaturedProjectLaunch = ({ isSmallScreen, orientation, languages, launch, github }) => {
+    const classes = useStyles();        
     return (   
-        <Box>
+        <Box paddingBottom="18%">
             {
                 orientation == "left" & isSmallScreen == false ?
                     <Box className={isSmallScreen ? classes.overallBoxSmallScreen : classes.overallBoxLeft}>                    
+                        <FeaturedProjectLanguages isSmallScreen={isSmallScreen} orientation={orientation} languages={languages} />
                         <Box className={isSmallScreen ? classes.innerBoxSmalLScreen : classes.innerBoxLeft}>
                             <Icon iconType='github' isSmallScreen={isSmallScreen}/>
                             <Icon iconType='launch' isSmallScreen={isSmallScreen}/>
-                        </Box>    
-                        <FeaturedProjectLanguages isSmallScreen={isSmallScreen} orientation={orientation} />
+                        </Box>                            
                     </Box> 
                 :
                     <Box className={isSmallScreen ? classes.overallBoxSmallScreen : classes.overallBoxRight}>
-                        <FeaturedProjectLanguages isSmallScreen={isSmallScreen} orientation={orientation} />
+                        <FeaturedProjectLanguages isSmallScreen={isSmallScreen} orientation={orientation} languages={languages} />
                         <Box className={isSmallScreen ? classes.innerBoxSmalLScreen : classes.innerBox}>
-                            <Icon iconType='github' isSmallScreen={isSmallScreen}/>
-                            <Icon iconType='launch' isSmallScreen={isSmallScreen}/>
+                            <Icon iconType='github' isSmallScreen={isSmallScreen} link={github} />
+                            <Icon iconType='launch' isSmallScreen={isSmallScreen} link={launch} />
                         </Box>    
                     </Box> 
             }            

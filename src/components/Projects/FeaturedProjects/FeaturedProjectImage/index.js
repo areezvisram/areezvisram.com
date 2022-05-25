@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(5),
         zIndex: 2,  
         right: theme.spacing(14),
-        width: '50%'      
+        width: '50%'  ,
+        float: "left"    
     },
 
     imageLeft: {
@@ -16,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(5),
         marginTop: theme.spacing(5),
         zIndex: 2,
-        width: '50%'
+        width: '50%',
+        float: "left"
     },
 
     media: {        
@@ -33,7 +35,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('1400')]: {
             width: '100%'
         },
-        height: 'auto'
+        height: 'auto',
+        // maxHeight: "270px",
+        // maxHeight: "min-content"
     },
 
     card: {
@@ -48,15 +52,16 @@ const useStyles = makeStyles((theme) => ({
 const FeaturedProjectImage = ({ orientation }) => {
     const classes = useStyles();
     return (
-        <Box className={orientation == "left" ? classes.imageRight : classes.imageLeft} mx='auto'>
-            <Card className={classes.card}>
+        <Box className={orientation == "left" ? classes.imageRight : classes.imageLeft} mx='auto' >
+            <Card className={classes.card} >
                 <CardMedia 
                     component='img'                    
                     image={require('../../../../images/website.png').default}
                     alt='me'    
-                    className={classes.media}                        
+                    className={classes.media}                                    
                 />
             </Card>
+            <div style={{ clear: "both" }}> </div>
         </Box>
     );
 };

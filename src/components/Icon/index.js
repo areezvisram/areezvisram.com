@@ -13,21 +13,28 @@ const renderSwitch = (icon) => {
 
 const useStyles = makeStyles((theme) => ({
     noPadding: {
-        paddingLeft: 0
+        paddingLeft: theme.spacing(1),
+        paddingRight: theme.spacing(1)
     },
 
-    minimalHorizontalPadding: {
+    minimalHorizontalPaddingRight: {
         paddingLeft: theme.spacing(1.5),
         paddingRight: theme.spacing(0),
+        paddingBottom: 0
+    },
+
+    minimalHorizontalPaddingLeft: {
+        paddingLeft: theme.spacing(0),
+        paddingRight: theme.spacing(1.5),
         paddingBottom: 0
     }
 }));
 
-const Icon = ({ iconType, isSmallScreen }) => {
+const Icon = ({ iconType, isSmallScreen, link, orientation }) => {
     const classes = useStyles();
 
     return (
-        <IconButton style={{ color: 'white' }} className={isSmallScreen ? classes.noPadding : classes.minimalHorizontalPadding}>
+        <IconButton style={{ color: 'white' }} className={isSmallScreen ? classes.noPadding : orientation == "right" ? classes.minimalHorizontalPaddingRight : classes.minimalHorizontalPaddingLeft } onClick={() => window.open(link)} >
             {renderSwitch(iconType)}
         </IconButton>
     )
