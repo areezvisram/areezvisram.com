@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     top: 0,
     right: 0,
     height: "100%",
-    width: "100%"
+    width: "100%",
+    filter: "brightness(35%)"
   },
 
   fiCardContent: {
@@ -36,7 +37,7 @@ const FeaturedProjectSmallScreen = ({ orientation, projectObject }) => {
               className={classes.media}
               media="picture"
               alt="Contemplative Reptile"
-              image="/website.png"
+              image={projectObject.image_url}              
               title="Contemplative Reptile"
             />
             <CardContent className={classes.fiCardContent}>

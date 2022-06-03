@@ -35,11 +35,10 @@ const useStyles = makeStyles((theme) => ({
 const FeaturedProjectDescriptionCard = ({ isSmallScreen, orientation, description }) => {
     const classes = useStyles();    
     return (        
-        <Grid container direction='column' alignContent={orientation == "left" ? "flex-start" : "flex-end"} style={{ marginTop: '25px' }}>
+        <Grid container direction='column' style={{ marginTop: '25px' }} alignContent={isSmallScreen ? "center" : orientation == "left" ? "flex-start" : "flex-end"}>
             <Card className={isSmallScreen ? classes.cardNoBackground : classes.backgroundCard} >
-                <Typography className={classes.white} variant="h5" align={isSmallScreen ? "center" : orientation}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium augue sit amet iaculis porta. Suspendisse tristique ipsum ex, et pulvinar arcu ultricies at.                    
-                    {/* {description} */}
+                <Typography className={classes.white} variant="h5" align={isSmallScreen ? "center" : orientation}>                    
+                    {description}
                 </Typography>                   
             </Card>
         </Grid>        

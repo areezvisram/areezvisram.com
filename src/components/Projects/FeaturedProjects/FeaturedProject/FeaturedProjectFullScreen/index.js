@@ -6,7 +6,7 @@ import FeaturedProjectObject from '../../FeaturedProjectObject';
 const FeaturedProjectFullScreen = ({ orientation, projectObject }) => {
     return (
         <Box width='100%'>
-            <FeaturedProjectImage orientation={orientation} />
+            <FeaturedProjectImage orientation={orientation} imageSrc={projectObject.image_url} />
             <FeaturedProjectObject isSmallScreen={false} orientation={orientation} projectObject={projectObject} />
         </Box>
     )

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     media: {        
-        width: '75%',
+        width: '1000px',
         [theme.breakpoints.down('1800')]: {
             width: '80%'
         },
@@ -33,11 +33,13 @@ const useStyles = makeStyles((theme) => ({
             width: '89%'
         },
         [theme.breakpoints.down('1400')]: {
-            width: '100%'
+            width: '100%',
+
         },
-        height: 'auto',
-        // maxHeight: "270px",
-        // maxHeight: "min-content"
+        [theme.breakpoints.down('1280')]: {
+            height: '350px'
+        },
+        height: '400px',
     },
 
     card: {
@@ -49,16 +51,17 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const FeaturedProjectImage = ({ orientation }) => {
+const FeaturedProjectImage = ({ orientation, imageSrc }) => {
     const classes = useStyles();
     return (
         <Box className={orientation == "left" ? classes.imageRight : classes.imageLeft} mx='auto' >
             <Card className={classes.card} >
                 <CardMedia 
                     component='img'                    
-                    image={require('../../../../images/website.png').default}
+                    // image={require('../../../../images/website.png').default}
+                    src={imageSrc}
                     alt='me'    
-                    className={classes.media}                                    
+                    className={classes.media}                                
                 />
             </Card>
             <div style={{ clear: "both" }}> </div>
