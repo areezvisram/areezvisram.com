@@ -29,9 +29,18 @@ const useStyles = makeStyles((theme) => ({
     nonFeaturedBox: {
         marginTop: 0,
         width: '70%',
-        marginBottom: '300px',
+        marginBottom: '300px',    
         [theme.breakpoints.down('1500')]: {
             width: '80%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: theme.spacing(55)
+        },
+        [theme.breakpoints.down('500')]: {
+            width: theme.spacing(45)
+        },
+        [theme.breakpoints.down('400')]: {
+            width: theme.spacing(50)
         },
         zIndex: 88
     }

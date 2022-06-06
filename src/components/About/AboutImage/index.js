@@ -25,7 +25,8 @@ const AboutImage = () => {
                 <CardMedia 
                     component='img'
                     height='300'                    
-                    src='http://res.cloudinary.com/dfv5rjydx/image/upload/v1654041270/zj33wgsdi3fczzoal5xt.jpg'
+                    // src='http://res.cloudinary.com/dfv5rjydx/image/upload/v1654041270/zj33wgsdi3fczzoal5xt.jpg'
+                    image={require('../../../images/me.jpeg').default}
                     alt='me'                            
                 />
             </Card>
