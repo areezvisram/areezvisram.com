@@ -1,6 +1,6 @@
-import { IconButton, makeStyles } from "@material-ui/core";
-import { GitHub, Launch } from "@material-ui/icons";
 import React from "react";
+import { IconButton, makeStyles } from "@material-ui/core";
+import { GitHub, Launch, School, Work, Code, EmojiObjects, Business, CheckCircle } from "@material-ui/icons";
 
 const renderSwitch = (icon) => {
     switch(icon) {
@@ -8,6 +8,18 @@ const renderSwitch = (icon) => {
             return <GitHub fontSize="large" />
         case 'launch':
             return <Launch fontSize="large" />
+        case 'school':
+            return <School />
+        case 'business':
+            return <Business />
+        case 'work':
+            return <Work />
+        case 'code':
+            return <Code />
+        case 'emoji':
+            return <EmojiObjects />
+        case 'check':
+            return <CheckCircle />
     }
 }
 
