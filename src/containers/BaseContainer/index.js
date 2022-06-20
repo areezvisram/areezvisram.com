@@ -7,6 +7,7 @@ import IntroductionContainer from '../IntroductionContainer';
 import AboutContainer from '../AboutContainer';
 import ExperienceContainer from '../ExperienceContainer';
 import ProjectsContainer from '../ProjectsContainer';
+import ContactFormContainer from '../ContactFormContainer';
 import ParticleEffect from '../../components/ParticleEffect';
 
 const BaseContainer = () => {
@@ -20,6 +21,7 @@ const BaseContainer = () => {
                 <AboutContainer />
                 <ExperienceContainer />
                 <ProjectsContainer />
+                <ContactFormContainer />
                 <ParticleEffect /> 
                 <CssBaseline />
             </Box>
