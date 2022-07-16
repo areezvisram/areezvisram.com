@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, Button, Grid, TextField, withStyles, DialogContent } from '@material-ui/core';
+import { makeStyles, Button, Grid, TextField, withStyles } from '@material-ui/core';
 import ContactDialog from '../ContactDialog';
 
 const useStyles = makeStyles((theme) => ({
@@ -58,6 +58,11 @@ const ContactForm = () => {
 
     const sendEntry = (e) => {
         e.preventDefault();
+        setFirstName('');
+        setLastName('');
+        setEmail('')
+        setMessage('')
+        console.log
         fetch('http://localhost:5000/contact-me/send-entry', {
             method: 'POST',
             headers: {
@@ -72,12 +77,12 @@ const ContactForm = () => {
         })
             .then((res) => res.json())
             .then(() => {
-                setError(false)
-                setOpen(true)
+                setError(false);
+                setOpen(true);
             })
             .catch(() => {
-                setError(true)
-                setOpen(true)
+                setError(true);
+                setOpen(true);
             })
     }
 
