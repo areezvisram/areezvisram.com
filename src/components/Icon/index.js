@@ -1,9 +1,9 @@
 import React from "react";
 import { IconButton, makeStyles } from "@material-ui/core";
-import { GitHub, Launch, School, Work, Code, EmojiObjects, Business, CheckCircle } from "@material-ui/icons";
+import { GitHub, Launch, School, Work, Code, EmojiObjects, Business, CheckCircle, LinkedIn } from "@material-ui/icons";
 
 const renderSwitch = (icon) => {
-    switch(icon) {
+    switch (icon) {
         case 'github':
             return <GitHub fontSize="large" />
         case 'launch':
@@ -20,6 +20,8 @@ const renderSwitch = (icon) => {
             return <EmojiObjects />
         case 'check':
             return <CheckCircle />
+        case 'linkedin':
+            return <LinkedIn fontSize="large" />
     }
 }
 
@@ -42,11 +44,11 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Icon = ({ iconType, isSmallScreen, link, orientation }) => {
+const Icon = ({ iconType, isSmallScreen, link, orientation, style }) => {
     const classes = useStyles();
 
     return (
-        <IconButton style={{ color: 'white' }} className={isSmallScreen ? classes.noPadding : orientation == "right" ? classes.minimalHorizontalPaddingRight : classes.minimalHorizontalPaddingLeft } onClick={() => window.open(link)} >
+        <IconButton style={style ? style : { color: 'white' }} className={isSmallScreen ? classes.noPadding : orientation == "right" ? classes.minimalHorizontalPaddingRight : classes.minimalHorizontalPaddingLeft} onClick={() => window.open(link)} >
             {renderSwitch(iconType)}
         </IconButton>
     )

@@ -4,13 +4,13 @@ import AboutTitle from '../../components/About/AboutTitle';
 import AboutParagraph from '../../components/About/AboutParagraph';
 import AboutImage from '../../components/About/AboutImage';
 
-const useStyles = makeStyles((theme) => ({    
-    introduction: {        
+const useStyles = makeStyles((theme) => ({
+    introduction: {
         flex: 1,
         // paddingLeft: theme.spacing(1),
         // paddingRight: theme.spacing(1),
         [theme.breakpoints.up('md')]: {
-            width: theme.spacing(150),
+            width: theme.spacing(140),
         },
         [theme.breakpoints.down('md')]: {
             width: theme.spacing(115),
@@ -18,26 +18,26 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: theme.spacing(70),
             flexDirection: 'column'
-        },  
+        },
         [theme.breakpoints.down('xs')]: {
             width: theme.spacing(55),
             marginBottom: theme.spacing(10)
-        },        
+        },
         [theme.breakpoints.down(470)]: {
             width: theme.spacing(50)
         },
         [theme.breakpoints.down(421)]: {
-            width: theme.spacing(48),            
+            width: theme.spacing(48),
         },
         [theme.breakpoints.down(400)]: {
-            width: theme.spacing(45),            
+            width: theme.spacing(45),
         },
         [theme.breakpoints.down(390)]: {
             width: theme.spacing(43),
-            paddingLeft: theme.spacing(1)            
+            paddingLeft: theme.spacing(1)
         },
         [theme.breakpoints.down(350)]: {
-            width: theme.spacing(40),            
+            width: theme.spacing(40),
         },
         zIndex: 88
     },
@@ -49,15 +49,15 @@ const useStyles = makeStyles((theme) => ({
 
 const AboutContainer = () => {
     const classes = useStyles();
-    return (          
+    return (
         <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction}>
-            <Box className={classes.introduction} mx="auto">            
+            <Box className={classes.introduction} mx="auto">
                 <Card className={classes.card} raised={false}>
                     <AboutTitle />
                     <AboutParagraph />
-                </Card>            
-            </Box>                      
-            <AboutImage />               
+                </Card>
+            </Box>
+            <AboutImage />
         </Box>
     );
 };

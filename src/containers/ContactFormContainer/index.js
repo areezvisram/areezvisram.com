@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     introduction: {
         flex: 1,
         [theme.breakpoints.up('md')]: {
-            width: theme.spacing(150),
+            width: theme.spacing(140),
         },
         [theme.breakpoints.down('md')]: {
             width: theme.spacing(115),

@@ -9,6 +9,7 @@ import ExperienceContainer from '../ExperienceContainer';
 import ProjectsContainer from '../ProjectsContainer';
 import ContactFormContainer from '../ContactFormContainer';
 import ParticleEffect from '../../components/ParticleEffect';
+import SocialsContainer from '../SocialsContainer';
 
 const BaseContainer = () => {
 
@@ -17,12 +18,13 @@ const BaseContainer = () => {
             {/* <div style={{ display: 'flex', flexDirection: 'column', height: '300vh' }}> */}
             <Box display="flex" flexDirection="column" height="300vh">
                 <Header />
+                <SocialsContainer />
                 <IntroductionContainer />
                 <AboutContainer />
                 <ExperienceContainer />
                 <ProjectsContainer />
                 <ContactFormContainer />
-                <ParticleEffect /> 
+                <ParticleEffect />
                 <CssBaseline />
             </Box>
         </ThemeProvider>

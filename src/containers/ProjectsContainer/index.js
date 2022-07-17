@@ -4,21 +4,21 @@ import ProjectTitle from '../../components/Projects/ProjectTitle';
 import FeaturedProjectsContainer from '../FeaturedProjectsContainer';
 import NonFeaturedProjectsContainer from '../NonFeaturedProjectsContainer';
 
-const useStyles = makeStyles((theme) => ({    
-    introduction: {        
+const useStyles = makeStyles((theme) => ({
+    introduction: {
         flex: 1,
         [theme.breakpoints.up('md')]: {
-            width: theme.spacing(150),
+            width: theme.spacing(140),
         },
         [theme.breakpoints.down('md')]: {
             width: theme.spacing(115),
         },
         [theme.breakpoints.down('sm')]: {
             width: theme.spacing(74),
-        },  
+        },
         [theme.breakpoints.down('xs')]: {
-            width: theme.spacing(55),            
-        },          
+            width: theme.spacing(55),
+        },
         zIndex: 88
     },
 
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     nonFeaturedBox: {
         marginTop: 0,
         width: '70%',
-        marginBottom: '300px',    
+        marginBottom: '300px',
         [theme.breakpoints.down('1500')]: {
             width: '80%',
         },
@@ -48,20 +48,20 @@ const useStyles = makeStyles((theme) => ({
 
 const ProjectsContainer = () => {
     const classes = useStyles();
-    return (  
+    return (
         <Box display='flex' flexDirection='column'>
             <Box flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction} paddingBottom="50px">
-                <Box className={classes.introduction} mx="auto">                            
+                <Box className={classes.introduction} mx="auto">
                     <Card className={classes.card} raised={false}>
-                        <ProjectTitle />  
-                        <FeaturedProjectsContainer />                                  
-                    </Card>                            
-                </Box>                                    
+                        <ProjectTitle />
+                        <FeaturedProjectsContainer />
+                    </Card>
+                </Box>
             </Box>
-            <Box mx="auto" className={classes.nonFeaturedBox}>                                            
-                <NonFeaturedProjectsContainer />            
-            </Box>   
-        </Box>        
+            <Box mx="auto" className={classes.nonFeaturedBox}>
+                <NonFeaturedProjectsContainer />
+            </Box>
+        </Box>
     );
 };
 

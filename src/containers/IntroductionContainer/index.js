@@ -3,11 +3,11 @@ import { Box, makeStyles, Card } from '@material-ui/core';
 import IntroductionTitle from '../../components/IntroductionTitle';
 
 const useStyles = makeStyles((theme) => ({
-    introduction: {        
+    introduction: {
         flex: 1,
         marginTop: theme.spacing(15),
         [theme.breakpoints.up('md')]: {
-            width: theme.spacing(150),
+            width: theme.spacing(140),
         },
         [theme.breakpoints.down('md')]: {
             width: theme.spacing(115),
@@ -15,28 +15,28 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: theme.spacing(70),
             flexDirection: 'column'
-        },  
+        },
         [theme.breakpoints.down('xs')]: {
             width: theme.spacing(55),
             marginBottom: theme.spacing(10)
-        },        
+        },
         [theme.breakpoints.down(470)]: {
             paddingLeft: theme.spacing(1),
             paddingRight: theme.spacing(1),
             width: theme.spacing(50)
         },
         [theme.breakpoints.down(421)]: {
-            width: theme.spacing(48),            
+            width: theme.spacing(48),
         },
         [theme.breakpoints.down(400)]: {
-            width: theme.spacing(45),            
+            width: theme.spacing(45),
         },
         [theme.breakpoints.down(390)]: {
             width: theme.spacing(43),
-            paddingLeft: theme.spacing(1)            
+            paddingLeft: theme.spacing(1)
         },
         [theme.breakpoints.down(350)]: {
-            width: theme.spacing(40),            
+            width: theme.spacing(40),
         },
         zIndex: 88
     },
@@ -48,13 +48,13 @@ const useStyles = makeStyles((theme) => ({
 
 const IntroductionContainer = () => {
     const classes = useStyles();
-    return (                    
+    return (
         // <Box className={classes.introduction} mx="auto">            
         <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction}>
             <Card className={classes.card} raised={false}>
                 <IntroductionTitle />
             </Card>
-        </Box>            
+        </Box>
     );
 };
 
