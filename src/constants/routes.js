@@ -2,22 +2,22 @@ const tabInfo = [
     {
         label: 'ABOUT',
         value: 0,
-        route: '/about',
+        route: '#about',
     },
     {
         label: 'EXPERIENCE',
         value: 1,
-        route: '/experience',
+        route: '#experience',
     },
     {
         label: 'PROJECTS',
         value: 2,
-        route: '/projects',
+        route: '#projects',
     },
     {
         label: 'CONTACT',
         value: 3,
-        route: '/contact',
+        route: '#contact',
     },
     {
         label: 'RESUME',

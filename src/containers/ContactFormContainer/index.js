@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const ContactFormContainer = () => {
     const classes = useStyles();
     return (
-        <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction}>
+        <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction} id="contact">
             <Box className={classes.introduction} mx="auto">
                 <Card className={classes.card} raised={false}>
                     <ContactMeTitle />

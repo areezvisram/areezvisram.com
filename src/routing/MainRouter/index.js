@@ -1,15 +1,13 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-const MainRouter = () => {
-    return (
-        <Switch>
-            <Route path="/about" />
-            <Route path="/experience" />
-            <Route path="/projects" />
-            <Route path="/contact" />
-            <Route path="/resume" />
-        </Switch>
-    )
-};
+// import React from 'react';
+// import { Route, Switch } from 'react-router-dom';
+// import { HashLink } from 'react-router-hash-link';
 
-export default MainRouter;
+// const MainRouter = () => {
+//     return (
+//         <Switch>
+//             <HashLink smooth to='#about' />
+//         </Switch>
+//     )
+// };
+
+// export default MainRouter;

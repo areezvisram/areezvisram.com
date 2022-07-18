@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 const AboutContainer = () => {
     const classes = useStyles();
     return (
-        <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction}>
+        <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction} id="about">
             <Box className={classes.introduction} mx="auto">
                 <Card className={classes.card} raised={false}>
                     <AboutTitle />
