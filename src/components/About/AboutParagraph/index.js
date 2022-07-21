@@ -5,6 +5,7 @@ import { School, Work, Code, EmojiObjects, Business, CheckCircle } from "@materi
 import { List, ListItemIcon, ListItem } from "@material-ui/core";
 import Icon from "../../Icon";
 import { useSelector } from "react-redux";
+import { serverURL } from "../../../constants/server";
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -37,61 +38,35 @@ const lastLetterUnderscore = (word) => {
 const AboutParagraph = () => {
     const classes = useStyles();
 
-    // const [aboutList, setAboutList] = useState([]);
-    // const [error, setError] = useState(null);
+    const [aboutList, setAboutList] = useState([]);
+    const [error, setError] = useState(null);
 
     const state = useSelector((state) => state.tokenReducer);
     const token = state.items;
 
-    // useEffect(() => {
-    //     if(!state.loading) {
-    //         fetch('http://localhost:5000/about/getList', {
-    //             method: 'GET',
-    //             headers: {
-    //                 'Access-Token': token,                    
-    //             }
-    //         })
-    //         .then((response) => {
-    //             if(response.ok) {
-    //                 return response.json();
-    //             }
-    //             throw response;
-    //         })
-    //         .then((data) => {
-    //             setAboutList(data.list);
-    //         })
-    //         .catch((error) => {
-    //             setError(error);
-    //         })
-    //     }
-    // }, [state.loading])
+    useEffect(() => {
+        if (!state.loading) {
+            fetch(`${serverURL}/about/getList`, {
+                method: 'GET',
+                headers: {
+                    'Access-Token': token,
+                }
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw response;
+                })
+                .then((data) => {
+                    setAboutList(data.list);
+                })
+                .catch((error) => {
+                    setError(error);
+                })
+        }
+    }, [state.loading])
 
-    const aboutList = [
-        {
-            icon: "school",
-            sentence: "Studying Software_ Engineering_ at McMaster_ University_"
-        },
-        {
-            icon: "business",
-            sentence: "Pursuing a Minor_ of_ Innovation_ along with my degree"
-        },
-        {
-            icon: "work",
-            sentence: "Completed four_ software internships, at SalonEverywhere,_ Signiant_ and Shopify_"
-        },
-        {
-            icon: "code",
-            sentence: "Have experience developing full_ stack,_ mobile,_ graphics,_ AI_ projects_ and much more"
-        },
-        {
-            icon: "emoji",
-            sentence: "Constant learner,_ passionate about all things technology_ and software_"
-        },
-        {
-            icon: "check",
-            sentence: "Proficient_ in wide variety of software_ languages_ and skills,_ check them out below:"
-        },
-    ]
     return (
         <Box>
             <List className={classes.white} dense>

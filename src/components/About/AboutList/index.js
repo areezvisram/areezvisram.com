@@ -3,9 +3,9 @@ import { makeStyles, List, ListItem, ListItemIcon, ListItemText, Typography, Box
 import { DoubleArrow } from '@material-ui/icons';
 import AboutExpandButton from './AboutExpandButton';
 
-const useStyles = makeStyles((theme) => ({ 
+const useStyles = makeStyles((theme) => ({
     white: {
-        color: theme.palette.primary.contrastText,        
+        color: theme.palette.primary.contrastText,
     },
 
     blue: {
@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     text: {
-        fontSize: theme.spacing(2.5)
+        fontSize: theme.spacing(2.5),
+        width: '150%'
     },
 
     icon: {
@@ -23,27 +24,28 @@ const useStyles = makeStyles((theme) => ({
 
 const AboutList = ({ title, listItems }) => {
     const classes = useStyles();
-    return (          
+    const beginningListItems = listItems.slice(0, 5)
+    return (
         <Box display='flex' flexDirection='column' flex={1} alignItems='center' mx='auto' marginTop='2em'>
             <Typography className={classes.blue} variant="h5" align="left">
                 {title}
-            </Typography>    
+            </Typography>
             <List className={classes.white} dense>
                 {
-                    listItems.map((listItem) => {
+                    beginningListItems.map((listItem) => {
                         return (
                             <ListItem>
                                 <ListItemIcon>
                                     <DoubleArrow className={classes.icon} />
                                 </ListItemIcon>
-                                <ListItemText primary={listItem} classes={{primary: classes.text}}/>
+                                <ListItemText primary={listItem} classes={{ primary: classes.text }} />
                             </ListItem>
                         )
                     })
                 }
             </List>
             <AboutExpandButton title={title} listItems={listItems} />
-        </Box>  
+        </Box>
     );
 };
 

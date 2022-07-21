@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles, Button, Grid, TextField, withStyles } from '@material-ui/core';
 import ContactDialog from '../ContactDialog';
+import { serverURL } from '../../../constants/server';
 
 const useStyles = makeStyles((theme) => ({
     textField: {
@@ -63,7 +64,7 @@ const ContactForm = () => {
         setEmail('')
         setMessage('')
         console.log
-        fetch('http://localhost:5000/contact-me/send-entry', {
+        fetch(`${serverURL}/contact-me/send-entry`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
