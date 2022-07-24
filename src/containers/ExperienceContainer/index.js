@@ -6,6 +6,7 @@ import ExperienceTabsContainer from '../ExperienceTabsContainer';
 const useStyles = makeStyles((theme) => ({
     introduction: {
         flex: 1,
+        paddingBottom: theme.spacing(15),
         [theme.breakpoints.up('md')]: {
             width: theme.spacing(140),
         },

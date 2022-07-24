@@ -1,10 +1,9 @@
 import React from 'react';
 import { Tabs, makeStyles, useTheme, useMediaQuery } from '@material-ui/core';
 import TabItem from './TabItem';
-import { BrowserRouter, Link } from 'react-router-dom';
-import MainRouter from '../../routing/MainRouter';
+import { BrowserRouter } from 'react-router-dom';
 import HamburgerMenu from '../HamburgerMenu';
-import { HashLink } from 'react-router-hash-link';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const useStyles = makeStyles((theme) => ({
     navBar: {
@@ -20,11 +19,11 @@ const NavigationItem = ({ tabInfo }) => {
     return (
         <BrowserRouter>
             {isSmallDisplay ? (
-                <HamburgerMenu tabInfo={tabInfo} tabComponent={Link} />
+                <HamburgerMenu tabInfo={tabInfo} tabComponent={AnchorLink} />
             ) : (
                 <div>
                     <Tabs className={classes.navBar} value={false}>
-                        {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={HashLink} key={tab.value} />)}
+                        {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={AnchorLink} key={tab.value} />)}
                     </Tabs>
                     {/* <MainRouter /> */}
                 </div>

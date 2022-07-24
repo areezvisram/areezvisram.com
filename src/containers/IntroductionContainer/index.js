@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
     introduction: {
         flex: 1,
         marginTop: theme.spacing(15),
+        paddingBottom: theme.spacing(15),
         [theme.breakpoints.up('md')]: {
             width: theme.spacing(140),
         },
@@ -50,7 +51,7 @@ const IntroductionContainer = () => {
     const classes = useStyles();
     return (
         // <Box className={classes.introduction} mx="auto">            
-        <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction}>
+        <Box display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' mx='auto' className={classes.introduction} id="top">
             <Card className={classes.card} raised={false}>
                 <IntroductionTitle />
             </Card>

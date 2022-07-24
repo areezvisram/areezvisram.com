@@ -3,13 +3,13 @@ import { Card, CardMedia, makeStyles, Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     imageRight: {
-        position: 'absolute',                
-        marginTop: theme.spacing(5), 
+        position: 'absolute',
+        marginTop: theme.spacing(5),
         marginRight: theme.spacing(5),
-        zIndex: 2,  
+        zIndex: 2,
         right: theme.spacing(14),
-        width: '50%'  ,
-        float: "left"    
+        width: '50%',
+        float: "left"
     },
 
     imageLeft: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         float: "left"
     },
 
-    media: {        
+    media: {
         width: '1000px',
         [theme.breakpoints.down('1800')]: {
             width: '80%'
@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
             height: '350px'
         },
         height: '400px',
+        filter: 'brightness(50%)'
     },
 
     card: {
@@ -56,12 +57,12 @@ const FeaturedProjectImage = ({ orientation, imageSrc }) => {
     return (
         <Box className={orientation == "left" ? classes.imageRight : classes.imageLeft} mx='auto' >
             <Card className={classes.card} >
-                <CardMedia 
-                    component='img'                    
+                <CardMedia
+                    component='img'
                     // image={require('../../../../images/website.png').default}
                     src={imageSrc}
-                    alt='me'    
-                    className={classes.media}                                
+                    alt='me'
+                    className={classes.media}
                 />
             </Card>
             <div style={{ clear: "both" }}> </div>

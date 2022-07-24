@@ -4,7 +4,7 @@ import Icon from '../../Icon';
 import FeaturedProjectLanguages from '../FeaturedProjects/FeaturedProjectObject/FeaturedProjectLanguages';
 import NonFeaturedProjectLanguages from './NonFeaturedProjectLanguages';
 
-const useStyles = makeStyles((theme) => ({    
+const useStyles = makeStyles((theme) => ({
     text: {
         color: 'white'
     },
@@ -24,17 +24,19 @@ const useStyles = makeStyles((theme) => ({
         }
     }
 }));
-const NonFeaturedProjectObject = ({ projectObject }) => {       
+const NonFeaturedProjectObject = ({ projectObject }) => {
     const classes = useStyles();
-    return (                         
+    return (
         <Paper display='flex' justifyContent='center' alignItems='center' elevation='3' className={classes.paper}>
             <Card className={classes.card} raised={true}>
                 <Typography variant='h4' className={classes.text}>{projectObject.name}</Typography>
-                <Typography variant='h6' className={classes.text}>{projectObject.description}</Typography>                
+                <Typography variant='h6' className={classes.text}>{projectObject.description}</Typography>
                 <NonFeaturedProjectLanguages languages={projectObject.languages} />
-                <Icon iconType='github' link={projectObject.github}/>
-                <Icon iconType='launch' link={projectObject.external}/>
-            </Card>        
+                <Icon iconType='github' link={projectObject.github} />
+                {
+                    projectObject.external ? <Icon iconType='launch' link={projectObject.external} /> : null
+                }
+            </Card>
         </Paper>
     );
 };

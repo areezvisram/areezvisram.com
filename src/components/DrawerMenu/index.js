@@ -37,7 +37,7 @@ const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo, tabComponent }) =
                 </IconButton>
             </Box>
             <Box textAlign={'center'} marginTop={theme.spacing(0.5)}>
-                {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={tabComponent} key={tab.value} />)}
+                {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={tabComponent} key={tab.value} handleDrawerOpen={handleDrawerOpen} />)}
             </Box>
             <SocialsContainer />
         </Drawer>

@@ -1,14 +1,11 @@
 import React from 'react';
 import logo from './areez.png';
 import { makeStyles, Typography } from '@material-ui/core';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const useStyles = makeStyles((theme) => ({
-    logo: {
-        // height: theme.spacing(25),
-        // width: theme.spacing(25)
-    },
+const useStyles = makeStyles(() => ({
     container: {
-        flexGrow: 1,        
+        flexGrow: 1,
     }
 }));
 
@@ -16,7 +13,9 @@ const Logo = () => {
     const classes = useStyles();
     return (
         <Typography className={classes.container}>
-            <img src={logo} alt="" className={classes.logo}></img>
+            <AnchorLink href="#top" offset='100'>
+                <img src={logo} alt="" className={classes.logo}></img>
+            </AnchorLink>
         </Typography>
     )
 }

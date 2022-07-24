@@ -7,12 +7,13 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(-5),
         [theme.breakpoints.down('sm')]: {
             marginLeft: theme.spacing(8),
-            marginTop: theme.spacing(5)
-        },  
+            marginTop: theme.spacing(5),
+            paddingBottom: theme.spacing(25)
+        },
         [theme.breakpoints.down('xs')]: {
             marginLeft: theme.spacing(2),
             marginTop: theme.spacing(0)
-        },          
+        },
         zIndex: 89
     }
 }));
@@ -22,12 +23,12 @@ const AboutImage = () => {
     return (
         <Box className={classes.image} mx='auto'>
             <Card>
-                <CardMedia 
+                <CardMedia
                     component='img'
-                    height='300'                    
+                    height='300'
                     // src='http://res.cloudinary.com/dfv5rjydx/image/upload/v1654041270/zj33wgsdi3fczzoal5xt.jpg'
                     image={require('../../../images/me.jpeg').default}
-                    alt='me'                            
+                    alt='me'
                 />
             </Card>
         </Box>

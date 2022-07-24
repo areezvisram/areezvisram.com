@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         // paddingLeft: theme.spacing(1),
         // paddingRight: theme.spacing(1),
+        paddingBottom: theme.spacing(15),
         [theme.breakpoints.up('md')]: {
             width: theme.spacing(140),
         },
@@ -17,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]: {
             width: theme.spacing(70),
-            flexDirection: 'column'
+            flexDirection: 'column',
+            paddingBottom: 0
         },
         [theme.breakpoints.down('xs')]: {
             width: theme.spacing(55),
