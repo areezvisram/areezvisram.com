@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, Box, Dialog, DialogTitle, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -40,5 +41,11 @@ const ContactDialog = ({ handleModalClose, open, isError }) => {
         </Dialog>
     );
 };
+
+ContactDialog.propTypes = {
+    handleModalClose: PropTypes.func,
+    open: PropTypes.bool,
+    isError: PropTypes.bool
+}
 
 export default ContactDialog;

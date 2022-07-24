@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
 import ExperienceObject from '../../ExperienceObject';
+import PropTypes from 'prop-types';
 
 const ExperienceVerticalTabPanel = ({ value, index, experienceObject }) => {
     return (
@@ -14,6 +15,12 @@ const ExperienceVerticalTabPanel = ({ value, index, experienceObject }) => {
             }
         </div>
     );
+};
+
+ExperienceVerticalTabPanel.propTypes = {
+    value: PropTypes.number,
+    index: PropTypes.number,
+    experienceObject: PropTypes.object
 };
 
 export default ExperienceVerticalTabPanel;

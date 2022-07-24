@@ -40,13 +40,14 @@ const NonFeaturedProjectsContainer = () => {
     return (
         <Grid container spacing='4' justifyContent='center'>
             {
-                nonFeaturedProjects.map((projectObject) => {
-                    return (
-                        <Grid item xl={4} lg={4} md={6} sm={6} xs={12}>
-                            <NonFeaturedProjectObject projectObject={projectObject} />
-                        </Grid>
-                    )
-                })
+                error ? null :
+                    nonFeaturedProjects.map((projectObject) => {
+                        return (
+                            <Grid item xl={4} lg={4} md={6} sm={6} xs={12} key={projectObject.id}>
+                                <NonFeaturedProjectObject projectObject={projectObject} />
+                            </Grid>
+                        )
+                    })
             }
         </Grid>
     )

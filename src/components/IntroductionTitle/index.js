@@ -22,36 +22,36 @@ const IntroductionTitle = () => {
                 Areez Visram.
             </Typography>
             <Typography className={classes.white} variant="h3" align="left">
-                I'm a {' '}
+                I&apos;m a {' '}
                 <Typography variant="h3" display="inline" className={classes.blue}>
                     Software Engineer. {''}
                 </Typography>
-            </Typography>            
+            </Typography>
             <Typography className={classes.white} variant="h5" align="left" display="inline">
-                I'm currently a{' '}
+                I&apos;m currently a{' '}
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     Software Engineering {''}
                 </Typography>
                 student at {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     McMaster University. {''}
-                </Typography>                
-                I'm passionate about {''}
+                </Typography>
+                I&apos;m passionate about {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     software engineering{''}
-                </Typography> 
+                </Typography>
                 , {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     software development{''}
-                </Typography> 
+                </Typography>
                 , {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     machine learning{''}
-                </Typography> 
+                </Typography>
                 , {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>
                     innovation{''}
-                </Typography> 
+                </Typography>
                 , {''}
                 and {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>

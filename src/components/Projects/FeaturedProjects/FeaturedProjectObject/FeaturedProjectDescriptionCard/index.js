@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles, Typography, Card, Grid } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     cardNoBackground: {
-        background: 'transparent',        
+        background: 'transparent',
         zIndex: 3,
         border: 'none',
         boxShadow: 'none'
@@ -33,16 +34,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FeaturedProjectDescriptionCard = ({ isSmallScreen, orientation, description }) => {
-    const classes = useStyles();    
-    return (        
+    const classes = useStyles();
+    return (
         <Grid container direction='column' style={{ marginTop: '25px' }} alignContent={isSmallScreen ? "center" : orientation == "left" ? "flex-start" : "flex-end"}>
             <Card className={isSmallScreen ? classes.cardNoBackground : classes.backgroundCard} >
-                <Typography className={classes.white} variant="h5" align={isSmallScreen ? "center" : orientation}>                    
+                <Typography className={classes.white} variant="h5" align={isSmallScreen ? "center" : orientation}>
                     {description}
-                </Typography>                   
+                </Typography>
             </Card>
-        </Grid>        
+        </Grid>
     );
+};
+
+FeaturedProjectDescriptionCard.propTypes = {
+    isSmallScreen: PropTypes.bool,
+    orientation: PropTypes.string,
+    description: PropTypes.string
 };
 
 export default FeaturedProjectDescriptionCard;

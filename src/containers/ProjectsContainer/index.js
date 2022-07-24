@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, makeStyles, Card, Grid } from '@material-ui/core';
+import { Box, makeStyles, Card } from '@material-ui/core';
 import ProjectTitle from '../../components/Projects/ProjectTitle';
 import FeaturedProjectsContainer from '../FeaturedProjectsContainer';
 import NonFeaturedProjectsContainer from '../NonFeaturedProjectsContainer';

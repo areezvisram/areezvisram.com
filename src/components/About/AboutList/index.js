@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, List, ListItem, ListItemIcon, ListItemText, Typography, Box } from '@material-ui/core';
 import { DoubleArrow } from '@material-ui/icons';
 import AboutExpandButton from './AboutExpandButton';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -34,7 +35,7 @@ const AboutList = ({ title, listItems }) => {
                 {
                     beginningListItems.map((listItem) => {
                         return (
-                            <ListItem>
+                            <ListItem key={listItem.id}>
                                 <ListItemIcon>
                                     <DoubleArrow className={classes.icon} />
                                 </ListItemIcon>
@@ -48,5 +49,10 @@ const AboutList = ({ title, listItems }) => {
         </Box>
     );
 };
+
+AboutList.propTypes = {
+    title: PropTypes.string,
+    listItems: PropTypes.array
+}
 
 export default AboutList;

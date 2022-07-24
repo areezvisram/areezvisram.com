@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -8,14 +9,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ExperienceObjectDates = ({ startDate, endDate }) => {
-    const classes = useStyles();    
+    const classes = useStyles();
     return (
-        <Box>            
+        <Box>
             <Typography className={classes.white} variant="h5" align="left">
                 {startDate} - {endDate}
-            </Typography>                   
+            </Typography>
         </Box>
     );
+};
+
+ExperienceObjectDates.propTypes = {
+    startDate: PropTypes.string,
+    endDate: PropTypes.string
 };
 
 export default ExperienceObjectDates;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     white: {
@@ -8,14 +9,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ExperienceObjectCompany = ({ company }) => {
-    const classes = useStyles();    
+    const classes = useStyles();
     return (
-        <Box>            
+        <Box>
             <Typography className={classes.white} variant="h5" align="left">
                 {company}
-            </Typography>                   
+            </Typography>
         </Box>
     );
+};
+
+ExperienceObjectCompany.propTypes = {
+    company: PropTypes.string
 };
 
 export default ExperienceObjectCompany;

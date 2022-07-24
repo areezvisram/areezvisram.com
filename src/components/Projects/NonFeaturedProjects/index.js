@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Card, makeStyles, Typography, Paper } from '@material-ui/core';
+import { Card, makeStyles, Typography, Paper } from '@material-ui/core';
 import Icon from '../../Icon';
-import FeaturedProjectLanguages from '../FeaturedProjects/FeaturedProjectObject/FeaturedProjectLanguages';
 import NonFeaturedProjectLanguages from './NonFeaturedProjectLanguages';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     text: {
@@ -39,6 +39,10 @@ const NonFeaturedProjectObject = ({ projectObject }) => {
             </Card>
         </Paper>
     );
+};
+
+NonFeaturedProjectObject.propTypes = {
+    projectObject: PropTypes.object
 };
 
 export default NonFeaturedProjectObject;

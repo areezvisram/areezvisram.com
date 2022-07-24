@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import BaseContainer from './containers/BaseContainer';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchToken } from './redux/actions';
 
 const App = () => {
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchToken());
-  },[dispatch])  
+  }, [dispatch])
 
   return (
-    <div>        
-      <BaseContainer/>
+    <div>
+      <BaseContainer />
     </div>
   )
 

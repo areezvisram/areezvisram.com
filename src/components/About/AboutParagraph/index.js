@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Typography, Box, makeStyles } from "@material-ui/core";
 import AboutListContainer from "../../../containers/AboutListContainer";
-import { School, Work, Code, EmojiObjects, Business, CheckCircle } from "@material-ui/icons";
 import { List, ListItemIcon, ListItem } from "@material-ui/core";
 import Icon from "../../Icon";
 import { useSelector } from "react-redux";
@@ -31,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const lastLetterUnderscore = (word) => {
-    // return word.charAt(0) == word.charAt(0).toUpperCase();
     return word.substr(-1) === '_';
 }
 
@@ -71,29 +69,30 @@ const AboutParagraph = () => {
         <Box>
             <List className={classes.white} dense>
                 {
-                    aboutList.map((listItem) => {
-                        return (
-                            <ListItem alignItems="flex-start">
-                                <ListItemIcon className={classes.icon}>
-                                    <Icon iconType={listItem.icon} />
-                                </ListItemIcon>
-                                <Typography variant="h5" align="left">
-                                    {listItem.sentence.split(' ').map((text) => {
-                                        if (lastLetterUnderscore(text)) {
-                                            return (
-                                                <Typography variant="h5" align="left" display="inline" className={classes.blue}>{text.slice(0, -1) + " "}</Typography>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Typography variant="h5" align="left" display="inline" className={classes.white}>{text + " "}</Typography>
-                                            )
-                                        }
-                                    })}
-                                </Typography>
-                            </ListItem>
-                        )
-                    })
+                    error ? null :
+                        aboutList.map((listItem) => {
+                            return (
+                                <ListItem alignItems="flex-start" key={listItem.id}>
+                                    <ListItemIcon className={classes.icon}>
+                                        <Icon iconType={listItem.icon} />
+                                    </ListItemIcon>
+                                    <Typography variant="h5" align="left">
+                                        {listItem.sentence.split(' ').map((text) => {
+                                            if (lastLetterUnderscore(text)) {
+                                                return (
+                                                    <Typography variant="h5" align="left" display="inline" className={classes.blue}>{text.slice(0, -1) + " "}</Typography>
+                                                )
+                                            }
+                                            else {
+                                                return (
+                                                    <Typography variant="h5" align="left" display="inline" className={classes.white}>{text + " "}</Typography>
+                                                )
+                                            }
+                                        })}
+                                    </Typography>
+                                </ListItem>
+                            )
+                        })
                 }
             </List>
             <AboutListContainer />

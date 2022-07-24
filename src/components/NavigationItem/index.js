@@ -1,10 +1,11 @@
 import React from 'react';
-import { Tabs, makeStyles, useTheme, useMediaQuery, Tab } from '@material-ui/core';
+import { Tabs, makeStyles, useTheme, useMediaQuery } from '@material-ui/core';
 import TabItem from './TabItem';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import HamburgerMenu from '../HamburgerMenu';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Resume from '../../resources/resume.pdf'
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     navBar: {
@@ -31,6 +32,10 @@ const NavigationItem = ({ tabInfo }) => {
             )}
         </BrowserRouter>
     )
+};
+
+NavigationItem.propTypes = {
+    tabInfo: PropTypes.array
 };
 
 export default NavigationItem;

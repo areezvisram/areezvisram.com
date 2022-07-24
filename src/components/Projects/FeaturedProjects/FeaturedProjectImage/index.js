@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardMedia, makeStyles, Box } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     imageRight: {
@@ -59,7 +60,6 @@ const FeaturedProjectImage = ({ orientation, imageSrc }) => {
             <Card className={classes.card} >
                 <CardMedia
                     component='img'
-                    // image={require('../../../../images/website.png').default}
                     src={imageSrc}
                     alt='me'
                     className={classes.media}
@@ -68,6 +68,11 @@ const FeaturedProjectImage = ({ orientation, imageSrc }) => {
             <div style={{ clear: "both" }}> </div>
         </Box>
     );
+};
+
+FeaturedProjectImage.propTypes = {
+    orientation: PropTypes.string,
+    imageSrc: PropTypes.string
 };
 
 export default FeaturedProjectImage;

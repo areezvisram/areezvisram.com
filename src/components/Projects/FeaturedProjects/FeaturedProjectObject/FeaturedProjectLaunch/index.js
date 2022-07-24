@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 import FeaturedProjectLanguages from '../FeaturedProjectLanguages';
 import Icon from '../../../../Icon';
-
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     overallBoxRight: {
@@ -70,6 +70,14 @@ const FeaturedProjectLaunch = ({ isSmallScreen, orientation, languages, launch, 
             }
         </Box>
     );
+};
+
+FeaturedProjectLaunch.propTypes = {
+    orientation: PropTypes.string,
+    isSmallScreen: PropTypes.bool,
+    languages: PropTypes.array,
+    launch: PropTypes.string,
+    github: PropTypes.string
 };
 
 export default FeaturedProjectLaunch;

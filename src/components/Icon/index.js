@@ -1,6 +1,7 @@
 import React from "react";
 import { IconButton, makeStyles } from "@material-ui/core";
 import { GitHub, Launch, School, Work, Code, EmojiObjects, Business, CheckCircle, LinkedIn } from "@material-ui/icons";
+import PropTypes from 'prop-types';
 
 const renderSwitch = (icon) => {
     switch (icon) {
@@ -52,6 +53,14 @@ const Icon = ({ iconType, isSmallScreen, link, orientation, style }) => {
             {renderSwitch(iconType)}
         </IconButton>
     )
-}
+};
+
+Icon.propTypes = {
+    iconType: PropTypes.string,
+    isSmallScreen: PropTypes.bool,
+    link: PropTypes.string,
+    orientation: PropTypes.string,
+    style: PropTypes.object
+};
 
 export default Icon;

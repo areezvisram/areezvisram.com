@@ -76,7 +76,7 @@ const ExperienceVerticalTabs = () => {
                 {
                     experience.map((experienceObj, index) => {
                         return (
-                            <Tab label={experienceObj.company} {...a11yProps(index)} className={classes.white} />
+                            <Tab label={experienceObj.company} {...a11yProps(index)} className={classes.white} key={index} />
                         )
                     })
                 }
@@ -84,7 +84,7 @@ const ExperienceVerticalTabs = () => {
             {
                 experience.map((experienceObj, index) => {
                     return (
-                        <ExperienceVerticalTabPanel value={value} index={index} experienceObject={error ? [] : experienceObj} />
+                        <ExperienceVerticalTabPanel value={value} index={index} experienceObject={error ? [] : experienceObj} key={index} />
                     )
                 })
             }

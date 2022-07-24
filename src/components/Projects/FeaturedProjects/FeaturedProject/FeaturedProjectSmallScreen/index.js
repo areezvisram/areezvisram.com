@@ -1,6 +1,7 @@
 import React from "react";
-import { Card, makeStyles, CardMedia, Box, withStyles, CardContent, Typography, CardActionArea } from "@material-ui/core";
+import { Card, makeStyles, CardMedia, Box, CardContent } from "@material-ui/core";
 import FeaturedProjectObject from "../../FeaturedProjectObject";
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
   card: {
@@ -29,23 +30,29 @@ const useStyles = makeStyles({
 });
 
 const FeaturedProjectSmallScreen = ({ orientation, projectObject }) => {
-    const classes = useStyles();
-    return (    
-        <Box my={2} mx={4}>
-          <Card className={classes.card}>          
-            <CardMedia
-              className={classes.media}
-              media="picture"
-              alt="Contemplative Reptile"
-              image={projectObject.image_url}              
-              title="Contemplative Reptile"
-            />
-            <CardContent className={classes.fiCardContent}>
-              <FeaturedProjectObject isSmallScreen={true} orientation={orientation} projectObject={projectObject} />
-            </CardContent>          
-          </Card>
-        </Box>       
-    )
-}
+  const classes = useStyles();
+  return (
+    <Box my={2} mx={4}>
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          media="picture"
+          alt="Contemplative Reptile"
+          image={projectObject.image_url}
+          title="Contemplative Reptile"
+        />
+        <CardContent className={classes.fiCardContent}>
+          <FeaturedProjectObject isSmallScreen={true} orientation={orientation} projectObject={projectObject} />
+        </CardContent>
+      </Card>
+    </Box>
+  )
+};
+
+FeaturedProjectSmallScreen.propTypes = {
+  orientation: PropTypes.string,
+  projectObject: PropTypes.object
+};
+
 
 export default FeaturedProjectSmallScreen;

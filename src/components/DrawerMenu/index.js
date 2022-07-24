@@ -4,6 +4,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import TabItem from '../NavigationItem/TabItem';
 import SocialsContainer from '../../containers/SocialsContainer';
 import Resume from '../../resources/resume.pdf'
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
@@ -44,6 +45,13 @@ const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo, tabComponent }) =
             <SocialsContainer />
         </Drawer>
     )
+}
+
+DrawerMenu.propTypes = {
+    isDrawerOpen: PropTypes.bool,
+    handleDrawerOpen: PropTypes.func,
+    tabInfo: PropTypes.array,
+    tabComponent: PropTypes.object
 }
 
 export default DrawerMenu;
