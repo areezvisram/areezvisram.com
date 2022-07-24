@@ -18,12 +18,7 @@ const tabInfo = [
         label: 'CONTACT',
         value: 3,
         route: '#contact',
-    },
-    {
-        label: 'RESUME',
-        value: 4,
-        route: '/resume',
-    },
+    }
 ];
 
 module.exports = {

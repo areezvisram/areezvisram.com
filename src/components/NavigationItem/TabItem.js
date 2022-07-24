@@ -21,10 +21,10 @@ const scrollWithOffset = (el) => {
 }
 
 
-const TabItem = ({ label, route, component, handleDrawerOpen }) => {
+const TabItem = ({ label, route, component, handleDrawerOpen, isResume }) => {
     const classes = useStyles();
     return (
-        <Tab key={label} label={label} className={classes.tab} component={component} href={route} offset='100' onClick={handleDrawerOpen ? () => { handleDrawerOpen() } : null} />
+        <Tab key={label} label={label} className={classes.tab} component={component} href={route} offset='100' onClick={handleDrawerOpen ? () => { handleDrawerOpen() } : null} target='_blank' rel='noreferrer' />
     )
 };
 

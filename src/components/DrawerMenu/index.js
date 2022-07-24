@@ -3,6 +3,7 @@ import { IconButton, Drawer, makeStyles, Box, useTheme } from '@material-ui/core
 import CloseIcon from '@material-ui/icons/Close';
 import TabItem from '../NavigationItem/TabItem';
 import SocialsContainer from '../../containers/SocialsContainer';
+import Resume from '../../resources/resume.pdf'
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
@@ -38,6 +39,7 @@ const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo, tabComponent }) =
             </Box>
             <Box textAlign={'center'} marginTop={theme.spacing(0.5)}>
                 {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={tabComponent} key={tab.value} handleDrawerOpen={handleDrawerOpen} />)}
+                <TabItem label="Resume" route={Resume} />
             </Box>
             <SocialsContainer />
         </Drawer>
