@@ -18,7 +18,7 @@ const BaseContainer = () => {
             {/* <div style={{ display: 'flex', flexDirection: 'column', height: '300vh' }}> */}
             <Box display="flex" flexDirection="column" height="300vh">
                 <Header />
-                <SocialsContainer />
+                <SocialsContainer isDrawerOpen={false} />
                 <IntroductionContainer />
                 <AboutContainer />
                 <ExperienceContainer />

@@ -42,7 +42,7 @@ const DrawerMenu = ({ isDrawerOpen, handleDrawerOpen, tabInfo, tabComponent }) =
                 {tabInfo.map(tab => <TabItem label={tab.label} route={tab.route} component={tabComponent} key={tab.value} handleDrawerOpen={handleDrawerOpen} />)}
                 <TabItem label="Resume" route={Resume} />
             </Box>
-            <SocialsContainer />
+            <SocialsContainer isDrawerOpen={true} />
         </Drawer>
     )
 }
