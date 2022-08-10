@@ -36,7 +36,7 @@ const AboutList = ({ title, listItems }) => {
                     beginningListItems.map((listItem) => {
                         return (
                             <ListItem key={listItem.id}>
-                                <ListItemIcon>
+                                <ListItemIcon style={{ minWidth: '35px' }}>
                                     <DoubleArrow className={classes.icon} />
                                 </ListItemIcon>
                                 <ListItemText primary={listItem} classes={{ primary: classes.text }} />

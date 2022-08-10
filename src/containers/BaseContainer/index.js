@@ -12,10 +12,8 @@ import ParticleEffect from '../../components/ParticleEffect';
 import SocialsContainer from '../SocialsContainer';
 
 const BaseContainer = () => {
-
     return (
         <ThemeProvider theme={theme}>
-            {/* <div style={{ display: 'flex', flexDirection: 'column', height: '300vh' }}> */}
             <Box display="flex" flexDirection="column" height="300vh">
                 <Header />
                 <SocialsContainer isDrawerOpen={false} />

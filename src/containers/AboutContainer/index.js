@@ -7,8 +7,6 @@ import AboutImage from '../../components/About/AboutImage';
 const useStyles = makeStyles((theme) => ({
     introduction: {
         flex: 1,
-        // paddingLeft: theme.spacing(1),
-        // paddingRight: theme.spacing(1),
         paddingBottom: theme.spacing(15),
         [theme.breakpoints.up('md')]: {
             width: theme.spacing(140),
@@ -32,15 +30,12 @@ const useStyles = makeStyles((theme) => ({
             width: theme.spacing(48),
         },
         [theme.breakpoints.down(400)]: {
-            width: theme.spacing(45),
+            paddingLeft: theme.spacing(1),
+            width: theme.spacing(50),
         },
-        [theme.breakpoints.down(390)]: {
-            width: theme.spacing(43),
-            paddingLeft: theme.spacing(1)
-        },
-        [theme.breakpoints.down(350)]: {
-            width: theme.spacing(40),
-        },
+        // [theme.breakpoints.down(350)]: {
+        //     width: theme.spacing(40),
+        // },
         zIndex: 88
     },
 
