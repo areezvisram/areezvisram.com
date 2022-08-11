@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# My Personal Website
+### http://areezvisram.com
+![Website Image](/README%20Images/website.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
+* My personal portfolio website which showcases my information, skills, projects and experience
+* This is a full stack application, this repository is the frontend
+* All the data on the frontend is served from a backend server, which requires a unique JWT token to make requests to
 
-## Available Scripts
+### Technologies
+* Frontend (this repository) built with React and Material UI
+* Fully authenticated backend built with Node and Express found [here](https://github.com/areezvisram/areezvisram.com-server)
 
-In the project directory, you can run:
+### Design
+![Design Diagram](/README%20Images/Frontend.jpeg)
+* The architecture design of the frontend system can be seen above.
+* The top layer App contains a BaseContainer, which is the base layer of the entire website.
+* The Base Container is made up of containers for each section of the site. So each section such as Introduction, About, Experience, Projects, Contact is its own container.
+* Each of these containers contains a variable number of React components needed to make up the container.
 
-### `yarn start`
+* The app contains an authenticated backend, meaning a unique JWT token is needed to make requests to the backend server
+* Whenever the app is loaded, that JWT token is generated using a client secret and stored in Redux
+* From there, any container that needs to make a backend request gets the JWT from the Redux store and can pass it down to its components as needed
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
+1. Ensure you have node and npm installed
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+2. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```sh
+   npm install
+   ```
 
-### `yarn build`
+3. Start the frontend application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```sh
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
