@@ -5,13 +5,15 @@ const useStyles = makeStyles((theme) => ({
     image: {
         marginLeft: theme.spacing(10),
         marginTop: theme.spacing(-5),
+        width: '350px',
+        height: 'auto',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: theme.spacing(8),
+            marginLeft: theme.spacing(14),
             marginTop: theme.spacing(5),
             paddingBottom: theme.spacing(25)
         },
         [theme.breakpoints.down('xs')]: {
-            marginLeft: theme.spacing(2),
+            marginLeft: theme.spacing(5),
             marginTop: theme.spacing(0)
         },
         zIndex: 89
@@ -25,8 +27,7 @@ const AboutImage = () => {
             <Card>
                 <CardMedia
                     component='img'
-                    height='300'
-                    image={require('../../../resources/me.jpeg').default}
+                    image={require('../../../resources/picture.jpeg').default}
                     alt='me'
                 />
             </Card>

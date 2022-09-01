@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles, Button, Grid, TextField, withStyles } from '@material-ui/core';
 import ContactDialog from '../ContactDialog';
+import { useSelector } from "react-redux";
 import { serverURL } from '../../../constants/server';
 
 const useStyles = makeStyles((theme) => ({
@@ -53,6 +54,9 @@ const ContactForm = () => {
     const [open, setOpen] = useState(false);
     const [error, setError] = useState(false);
 
+    const state = useSelector((state) => state.tokenReducer);
+    const token = state.items;
+
     const handleModalClose = () => {
         setOpen(false);
     }
@@ -63,12 +67,12 @@ const ContactForm = () => {
         setLastName('');
         setEmail('')
         setMessage('')
-        console.log
         fetch(`${serverURL}/contact-me/send-entry`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Token': token,
             },
             body: JSON.stringify({
                 name: `${firstName} ${lastName}`,
