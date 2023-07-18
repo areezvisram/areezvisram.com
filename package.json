@@ -20,7 +20,7 @@
     "react-material-ui-carousel": "^3.2.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "react-test-renderer": "^17.0.2",
     "react-tsparticles": "^1.37.5",
     "redux": "^4.1.2",
@@ -70,8 +70,11 @@
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
     "@storybook/node-logger": "^6.3.6",
-    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/preset-create-react-app": "^7.1.0",
     "@storybook/react": "^6.3.6",
     "eslint-plugin-react": "^7.30.1"
+  },
+  "overrides": {
+    "react-refresh": "0.11.0"
   }
 }
