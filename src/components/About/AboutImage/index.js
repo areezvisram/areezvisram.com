@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardMedia, makeStyles, Box } from '@material-ui/core';
+import MyPicture from '../../../resources/picture.jpeg'
 
 const useStyles = makeStyles((theme) => ({
     image: {
@@ -27,7 +28,7 @@ const AboutImage = () => {
             <Card>
                 <CardMedia
                     component='img'
-                    image={require('../../../resources/picture.jpeg').default}
+                    image={MyPicture}
                     alt='me'
                 />
             </Card>
