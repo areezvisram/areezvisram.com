@@ -8,16 +8,19 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         paddingBottom: theme.spacing(15),
         [theme.breakpoints.up('md')]: {
-            width: theme.spacing(140),
+            width: theme.spacing(142),
         },
         [theme.breakpoints.down('md')]: {
             width: theme.spacing(115),
         },
         [theme.breakpoints.down('sm')]: {
-            width: theme.spacing(70),
+            width: theme.spacing(80),
+        },
+        [theme.breakpoints.down(660)]: {
+            width: theme.spacing(65),
         },
         [theme.breakpoints.down('xs')]: {
-            width: theme.spacing(55),
+            width: theme.spacing(60),
             marginBottom: theme.spacing(10)
         },
         zIndex: 88

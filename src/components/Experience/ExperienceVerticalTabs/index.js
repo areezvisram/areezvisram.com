@@ -8,6 +8,12 @@ import { serverURL } from '../../../constants/server';
 const useStyles = makeStyles((theme) => ({
     white: {
         color: theme.palette.primary.contrastText,
+        [theme.breakpoints.down(660)]: {
+            marginRight: '-35px',
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginRight: '20px',
+        },
     },
 
     box: {
@@ -16,10 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     tabs: {
-        width: '250px',
-        [theme.breakpoints.down('md')]: {
-            width: '300px'
-        },
+        width: '175px',
         [theme.breakpoints.down('1070')]: {
             width: '100%'
         }

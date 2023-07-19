@@ -4,18 +4,16 @@ import ExperienceObjectCompany from './ExperienceObjectCompany';
 import ExperienceObjectPosition from './ExperienceObjectPosition';
 import ExperienceObjectDates from './ExperienceObjectDates';
 import ExperienceObjectDescription from './ExperienceObjectDescription';
-import ExperienceObjectTechEnv from './ExperienceObjectTechEnv';
 import PropTypes from 'prop-types';
 
 const ExperienceObject = ({ experienceObject }) => {
-    const { company, position, startDate, endDate, description, technical_environment } = experienceObject;
+    const { company, position, startDate, endDate, description } = experienceObject;
     return (
-        <Box alignItems='left' marginTop='-15px'>
+        <Box alignItems='left' marginTop='-15px' width='1000px'>
             <ExperienceObjectCompany company={company} />
             <ExperienceObjectPosition position={position} />
             <ExperienceObjectDates startDate={startDate} endDate={endDate} />
             <ExperienceObjectDescription listItems={description} />
-            <ExperienceObjectTechEnv techEnv={technical_environment} />
         </Box>
     );
 };

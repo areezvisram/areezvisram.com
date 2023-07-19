@@ -6,6 +6,22 @@ import PropTypes from 'prop-types';
 const useStyles = makeStyles((theme) => ({
     white: {
         color: theme.palette.primary.contrastText,
+        width: "95%",
+        [theme.breakpoints.down('md')]: {
+            width: "70%",
+        },
+        [theme.breakpoints.down(1070)]: {
+            width: "90%",
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: "60%",
+        },
+        [theme.breakpoints.down(660)]: {
+            width: '50%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '40%',
+        },
     },
 
     blue: {
@@ -13,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     text: {
-        fontSize: theme.spacing(2.5)
+        fontSize: theme.spacing(2.5),
+        // marginRight: "40px"
     },
 
     icon: {
