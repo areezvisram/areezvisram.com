@@ -30,11 +30,11 @@ const IntroductionTitle = () => {
             <Typography className={classes.white} variant="h5" align="left" display="inline">
                 I&apos;m currently a{' '}
                 <Typography variant="h5" display="inline" className={classes.blue}>
-                    Software Engineering {''}
+                    Software Developer {''}
                 </Typography>
-                student at {''}
+                at {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>
-                    McMaster University. {''}
+                    Rewind. {''}
                 </Typography>
                 I&apos;m passionate about {''}
                 <Typography variant="h5" display="inline" className={classes.blue}>

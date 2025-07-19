@@ -4,9 +4,9 @@ import MyPicture from '../../../resources/picture.jpeg'
 
 const useStyles = makeStyles((theme) => ({
     image: {
-        marginLeft: theme.spacing(10),
-        marginTop: theme.spacing(-5),
-        width: '350px',
+        marginLeft: theme.spacing(5),
+        marginTop: theme.spacing(-20),
+        width: '400px',
         height: 'auto',
         [theme.breakpoints.down('sm')]: {
             marginLeft: theme.spacing(14),
